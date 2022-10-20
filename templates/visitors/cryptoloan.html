@@ -1,0 +1,119 @@
+{% extends 'basefiles/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="intro-text header-intro cryptoloan-section">
+    <div class="flex">
+      <div class="left">
+        <h2>
+         Crypto Loans
+        </h2>
+        <p>
+         Borrow for spot/margins/future trading on our staking to earn a high APY
+        </p>
+    </div>
+    <div class="right">
+    <div class="img-container">
+    <img src="{% static 'images/huloex-debit-card.svg' %} ">
+    </div>
+    </div>
+  </div>
+ </section>
+ </div>
+
+    <!-- site main body -->
+    <!-- note panel used  here is a general style -->
+    <main class="site-body cryptoloan-main panel cryptoloan-panel">
+    <div>
+     <div class="flex-container">
+        <form>
+         <div class="float-left">
+            <div>
+            <label for="borrow">i want to borrow</label>
+            <div class="select-field">
+            <select id="borrow">
+                <option></option>
+                <option value="btc">ETH</option>
+                <option value="btc">BTC</option>
+                <option value="btc">BUSD</option>
+                <option value="btc" selected>USDT</option>
+            </select>
+           </div>
+            </div>
+            <div>
+                <label for="borrow">collateral amount</label>
+                <div class="select-field">
+                <select id="borrow">
+                <option></option>
+                <option value="btc" >ETH</option>
+                <option value="btc" selected>BTC</option>
+                <option value="btc">BUSD</option>
+                <option value="btc">USDT</option>
+                </select>
+               </div>
+            </div>
+            <div>
+                <label for="borrow">loan term</label>
+                <div class="select-field">
+                 <select id="borrow">
+                    <option></option>
+                    <option value="7days" >7 days</option>
+                    <option value="14days" selected>14 days</option>
+                    <option value="30days">30 days</option>
+                    <option value="50days">50 days</option>
+                    <option value="90days">90 days</option>
+                    </select>
+                </div>
+                    <small>no interested penalty for early payment</small>
+                </div>
+                <div class="comment">
+                    <textarea cols="20" rows="10" placeholder="Your comment"></textarea>
+                </div>
+            </div>
+            <div class="float-right">
+                <h3>Initail LTV(Loan-to-Value Ratio)</h3>
+                <p class="ratio">65%</p>
+                <div class="row">
+                  <span>Initail LTV 65%</span>
+                  <span>Margin Call 75%</span>
+                  <span>Liqiudation LTV 83%</span>
+                </div>
+                <div class="flex-container">
+                    <div>
+                        <p>Liquidation Price(BNB/BUSD)</p>
+                    </div>
+                    <div>
+                        <p>Hourly and Daily Interest Rate</p>
+                        <span>0.001042% / 0.0250%</span>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div>
+                        <p>Total Interest Amount</p>
+                        <span>BUSD</span>
+                    </div>
+                    <div>
+                        <p>Repayment Amount</p>
+                        <span>BUSD</span>
+                    </div>
+                </div>
+            <button class="cta-btn" type="submit"> Submit </button>
+            </div>
+       </form>
+     </div>
+    </div>
+     
+    </main>
+    
+    <section class="roadmap-section">
+        <div class="roadmap-icon">
+        <img src="{% static 'images/crypto-loan-roadmap.svg' %} " alt="loan road map"/>
+    </div>
+    </section>
+
+
+
+
+
+{% endblock content %}

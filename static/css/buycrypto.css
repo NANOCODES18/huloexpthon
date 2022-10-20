@@ -1,0 +1,236 @@
+/**************
+Buycrypto styles
+***************/
+.buycrypto-header-intro{
+text-align:center;
+}
+/*.buycrypto-header-intro > *{
+
+}
+*/.buycrypto-header-intro .buycrypto-caption p{
+font-weight:500;
+font-size:1.8rem;
+text-transform:capitalize;
+margin:0;
+display:inline-block;
+}
+.buycrypto-caption .caption-line{
+display:block;
+width:60px;
+height:4px;
+background:#0A13DF;
+color:#0A13DF; 
+}
+.buycrypto-header-intro .img-container{
+
+}
+.site-body.buycrypto-panel{
+padding:1rem;
+margin-top:-150px;
+position:relative;
+z-index:1020;
+background:transparent;
+}
+.purchase-section >*{
+margin-bottom:1rem;
+padding:1.2rem;
+background: #FFFFFF;
+-moz-box-shadow:0px 4px 34px 1px rgba(96, 96, 96, 0.07);
+-o-box-shadow:0px 4px 34px 1px rgba(96, 96, 96, 0.07);
+box-shadow:0px 4px 34px 1px rgba(96, 96, 96, 0.07);
+border-radius: 17px;
+}
+
+.purchase-section h4{
+ border-left:3px solid #0A13DF;
+ padding-left:0.4rem;
+ margin-bottom:1rem;
+}
+.purchase-section .float-left .img-container{
+ height:40px;
+ width:40px;
+ border-radius:50%;
+ padding:0.5rem;
+background: #FFFFFF;
+box-shadow: 0px 4px 28px -1px rgba(0, 0, 0, 0.11);
+display:flex;
+position:relative;
+}
+.purchase-section .float-left .img-container img{
+margin:auto;
+}
+
+.purchase-section .float-left .flex-container{
+display:flex;
+align-items:center;
+gap:4%;
+}
+.purchase-section .float-left .flex-container>*{
+margin-bottom:2rem;
+}
+.purchase-section .dotted-line{
+border-right:4px dotted #0A13DF;
+display:block;
+position:relative;
+top:40px;
+left:-15px;
+}
+.purchase-section .float-left .flex-container:last-child .dotted-line{
+border:none;
+}
+.purchase-section .float-right input{
+border:1px solid blue;
+text-align:center;
+-webkit-text-align:center;
+-moz-text-align:center;
+text-transform:capitalize;
+font-weight:200;
+padding:1rem;
+background: #FFFFFF;
+border: 1px solid #EFEFEF;
+box-shadow: inset 3px 3px 5px -2px rgba(0, 0, 0, 0.11);
+border-radius: 6px;
+outline:none;
+margin-bottom:1rem;
+width:100%;
+}
+.purchase-section .flex-container select{
+background: #FFFFFF;
+border: 1px solid #EFEFEF;
+box-shadow:inset 3px 3px 5px -2px rgba(0, 0, 0, 0.11);
+-webkit-box-shadow:inset 3px 3px 5px -2px rgba(0, 0, 0, 0.11);
+-moz-box-shadow:inset 3px 3px 5px -2px rgba(0, 0, 0, 0.11);
+-o-box-shadow:inset 3px 3px 5px -2px rgba(0, 0, 0, 0.11);
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+outline:none;
+width:100%;
+text-align:left;
+-webkit-text-align:left;
+-moz-text-align:left;
+padding:1rem;
+-webkit-padding:1rem;
+-moz-padding:1rem;
+color:#ccc;
+-webkit-appearance:none;
+}
+.purchase-section .flex-container .select-field,
+.purchase-section .float-right .payment-method .select-payment
+{
+position:relative;
+}
+.purchase-section .flex-container .select-field:after,
+.purchase-section .float-right .payment-method .select-payment:after
+{
+position:absolute;
+content:">";
+transform:rotate(90deg);
+font-size:18px;
+color:#A7A7A7;
+top:8px;
+right:10px;
+display:inline-block;
+}
+
+.purchase-section .float-right .payment-method{
+text-transform:capitalize;
+margin:3rem 0 2rem 0;
+text-align:center;
+font-size:0.94rem;
+font-weight:600;
+letter-spacing:0.1rem;
+}
+.purchase-section .float-right .payment-method p{
+margin-bottom:2rem;
+}
+.purchase-section .float-right .payment-method .straight-line{
+display:inline-block;
+border-bottom:3px solid #ccc;
+width:20%;
+}
+.purchase-section .float-right .payment-method select{
+border:1px solid #F8F8F8;
+/*margin:2rem 0 0 0;
+*/background: #FFFFFF;
+box-shadow: 7px 0px 22px -1px rgba(116, 116, 116, 0.08);
+-webkit-box-shadow: 7px 0px 22px -1px rgba(116, 116, 116, 0.08);
+-moz-box-shadow: 7px 0px 22px -1px rgba(116, 116, 116, 0.08);
+-o-box-shadow: 7px 0px 22px -1px rgba(116, 116, 116, 0.08);
+border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+padding:1rem;
+-webkit-padding:1rem;
+-moz-padding:1rem;
+color:#ccc;
+text-transform:capitalize;
+width:100%;
+text-indent:0.8rem;
+font-size:0.7rem;
+outline:none;
+-webkit-appearance:none;
+}
+
+.purchase-section .float-right .payment-gateways{
+margin-top:2rem;
+}
+.purchase-section .float-right .submit-btn button{
+border:none;
+box-shadow:none;
+display:block;
+width:120px;
+background:#0A13DF;
+border-radius:15px;
+margin:2rem auto;
+transition:all 0.5s;
+transform:scale(0.9);
+}
+.purchase-section .float-right .submit-btn a{
+color:#fff;
+display:block;
+padding:1rem;
+font-weight:500;
+font-size:1rem;
+}
+.purchase-section .float-right .submit-btn button:hover{
+transform:scale(1);
+}
+
+
+
+
+
+
+/**************
+Tablet device
+***************/
+@media(min-width:380px){
+/*.purchase-section .float-right .payment-method .straight-line{
+width:30%;
+}
+*/}
+
+
+
+
+
+
+
+/**************
+Desktop device
+***************/
+@media(min-width:650px){
+.site-body.buycrypto-panel{
+margin-top:-200px;
+}
+.purchase-section{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-around;
+gap:4%;
+}
+.purchase-section >*{
+flex:1 1 48%;
+}
+}

@@ -1,0 +1,63 @@
+{% extends 'basefiles/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="intro-text header-intro debitcard-section">
+    <div class="flex">
+      <div class="left">
+        <p>Recieve the <strong> HuloEX </strong> debit cards,
+        </p>
+        <p>Recive <strong> bonus </strong> and <strong>Cashback</strong> 
+        <br>
+        each time you pay with
+        <br>
+         our <strong>debit card</strong> 
+        </p>
+    </div>
+    <div class="right">
+    <div class="img-container">
+    <img src="{% static 'images/huloex-debit-card.svg' %} ">
+    </div>
+    </div>
+  </div>
+ </section>
+ </div>
+
+    <!-- site main body -->
+    <main class="site-body debitcard-main">
+     <div class="debitcard-panel">
+        <div class="flex-container">
+            <div class="card-container">
+                <div class="img-container">
+                    <img src="{% static 'images/virtual-card-icon.svg' %} "/>
+                </div>
+                <p>
+                    Recieve free deposit card with a deposit of up to &dollar; 45,000
+                </p>
+            </div>
+            <div class="card-container">
+                <div class="img-container">
+                    <img src="{% static 'images/virtual-card-icon.svg' %} "/>
+                </div>
+                <p>
+                    Pay with your virtual card instantly after application.
+                </p>
+            </div>
+            <div class="card-container">
+                <div class="img-container">
+                    <img src="{% static 'images/app-notifcation-icon.svg' %} "/>
+                </div>
+                <p>
+                    Supported by samsung pay, ios and play store
+                </p>
+            </div>
+        </div>
+     </div>
+     
+    </main>
+    
+
+
+
+{% endblock content %}

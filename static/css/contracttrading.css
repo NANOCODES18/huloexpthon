@@ -1,0 +1,292 @@
+/* .main.contracttrading-main{
+background:#fff none;
+} */
+
+.contracttrade-grid .header-container{
+display:flex;
+flex-flow:row wrap;
+gap:4%;
+justify-content:space-around;
+margin-bottom:1rem;
+}
+.contracttrade-grid .header-container a{
+font-weight:500;
+padding:0.5rem;
+}
+.contracttrade-grid .realtime-quote-text{
+text-align:center;
+}
+.contracttrade-grid .realtime-quote-text h3{
+text-align:center;
+font-size:0.852rem;
+font-weight:600;
+display:inline-block;
+}
+.contracttrade-grid .realtime-quote-text h3:after{
+content:"";
+display:block;
+border-bottom:3px solid blue;
+width:80px;
+margin:0 auto;
+}
+.contracttrade-grid .header-container a:hover{
+background: rgba(217, 217, 217, 0.16);
+border-radius: 5px 0px 0px 0px;
+/* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+.contracttrade-grid .align-left{
+background: #FFFFFF;
+-webkit-box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+-moz-box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+-o-box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+border-radius: 14px;
+padding:1rem;
+}
+.contracttrade-grid .align-right{
+padding:1rem;
+background: #FFFFFF;
+-webkit-box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+-moz-box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+-o-box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+box-shadow:0px 4px 24px -1px rgba(0, 0, 0, 0.13);
+border-radius: 14px;
+}
+
+/* =========Align Right Styles===== */
+.contracttrade-grid .balance-card h3,
+.contracttrade-grid .balance-card h4
+{
+font-size:0.822rem;
+}
+.contracttrade-grid .balance-card h4{
+font-weight:500;
+margin-bottom:1rem;
+}
+.contracttrade-grid .balance-card h4 span{
+font-size:0.682rem;
+}
+.contracttrade-grid .box-container>*{
+padding:0.84rem 0.4rem 0.4rem 0.4rem;
+border: 1px solid #E5E5E5;
+border-radius: 8px;
+color:#FFFFFF;
+background: #EA4435;
+margin-bottom:0.5rem;
+cursor:pointer;
+}
+.contracttrade-grid .box-container>*:first-child{
+background: #6BF893
+}
+.contracttrade-grid .box-container>*:last-child{
+background: #FA9233
+}
+.contracttrade-grid .box p{
+font-size:0.75rem;
+font-weight:500;
+vertical-align:bottom;
+}
+.contracttrade-grid .duration-in-seconds p,
+.contracttrade-grid .amount-in-usdt p
+{
+margin-top:1rem;
+position: relative;
+}
+.contracttrade-grid .duration-in-seconds p::after,
+.contracttrade-grid .amount-in-usdt p::after
+{
+content:"";
+width:65%;
+margin-left:0.3rem;
+display:inline-block;
+border-bottom:2px solid #E5E5E5;
+vertical-align:middle;
+}
+.contracttrade-grid .increment-decrement-box{
+position: relative;
+margin:1rem auto;
+}
+.contracttrade-grid .increment-decrement-box::before,
+.contracttrade-grid .increment-decrement-box::after
+{
+position:absolute;
+content:"+";
+/* transform:rotate(90deg); */
+font-size:16px;
+color:#A7A7A7;
+top:0;
+right:0;
+/* display:inline-block; */
+background:var(--blue-increment-btn);
+width:40px;
+/* height:auto; */
+padding:0.3rem;
+border-radius:8px;
+text-align:center;
+color:#FFFFFF;
+cursor: pointer;
+}
+.contracttrade-grid .increment-decrement-box::after{
+content:'-';
+left:0;
+background:var(--faint-increment-btn);
+color:#000000;
+/* font-size:1.2rem; */
+}
+.contracttrade-grid .increment-decrement-box input{
+border-radius:8px;
+outline:none;
+border:1px solid #E5E5E5;
+padding:0.5rem;
+width:100%;
+text-align:center;
+}
+.contracttrade-grid .price-buttons{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-between;
+}
+.contracttrade-grid .price-buttons>*{
+padding:0.6rem 0.7rem;
+text-align:center;
+font-size:0.822rem;
+font-weight:600;
+color:#FFFFFF;
+cursor:pointer;
+display:block;
+/* margin:auto; */
+margin-bottom:1rem;
+}
+.contracttrade-grid .price-buttons>*:first-child{
+background: #6BF893;
+border: 1px solid #E5E5E5;
+}
+.contracttrade-grid .price-buttons>*:last-child{
+background:#EF5350;
+}
+
+.contracttrade-grid .balance-footer small{
+text-align:center;
+font-weight:500;
+display:block;
+font-size:0.722rem;
+}
+
+
+/* =======Mian Middle Styles============ */
+.contracttrading-main .main-middle{
+padding:1rem;
+background: #FFFFFF;
+-webkit-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-o-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+border-radius: 13px;
+margin-bottom:1rem;
+}
+.contracttrading-main .trade-no-header h4{
+font-size:11px;
+font-weight:600;
+color:#8C8C8C;
+margin:0rem 0rem 0.6rem 4rem;
+}
+.contracttrading-main .progress-bar{
+position:relative;
+height:20px;
+background:#ECECEC;
+border-radius:6px;
+margin-bottom:1rem;
+}
+.contracttrading-main .progress-bar::before{
+content:"";
+display:inline-block;
+height:20px;
+background:#6BF893;
+width:70%;
+border-radius:inherit;
+}
+.contracttrading-main .flex-container ul{
+font-size:0.72rem;
+font-weight:500;
+display:flex;
+flex-flow:row wrap;
+gap:2%;
+}
+.contracttrading-main .flex-container ul>*{
+ background: rgba(217, 217, 217, 0.34);
+border-radius: 4px;
+margin-bottom:1rem;
+/* flex-basis:22%;    */
+text-align:center;
+padding:0rem 0.6rem;
+}
+
+.contracttrading-main .recent-trades-analysis ul{
+display:flex;
+flex-flow:row wrap;
+/* justify-content:space-around; */
+gap:4%;
+margin-bottom:2rem;
+}
+
+.contracttrading-main .trade-report{
+text-align:center;
+font-weight:600;
+}
+
+
+
+
+
+
+
+
+
+/* ========Main Bottom Styles====== */
+.contracttrading-main .main-bottom{
+padding:1rem;
+background: #FFFFFF;
+-moz-box-shadow:0px 4px 34px 1px rgba(96, 96, 96, 0.07);
+-o-box-shadow:0px 4px 34px 1px rgba(96, 96, 96, 0.07);
+box-shadow:0px 4px 34px 1px rgba(96, 96, 96, 0.07);
+border-radius: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ================================
+Desktop Design
+===================================*/
+@media(min-width:650px){
+.contracttrade-grid .box-container{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-between;
+text-align:center;
+gap:4%;
+}
+.contracttrade-grid .box-container>*{
+flex:1 1 48%;
+border:1px solid green;
+border: 1px solid #E5E5E5;
+border-radius: 8px;
+}
+
+}
+
+/* ================================
+Large Desktop Design
+===================================*/
+@media(min-width:1200px){
+.contracttrade-grid .box-container>*{
+flex:1 1 24%;
+} 
+  
+}

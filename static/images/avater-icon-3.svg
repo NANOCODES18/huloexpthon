@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="27mm" height="27mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2700 2700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#E4E6E9;stroke-width:20}
+    .fil3 {fill:#FCFAD8}
+    .fil0 {fill:#090BA8}
+    .fil4 {fill:#C3C7CD}
+    .fil5 {fill:#E4E6E9}
+    .fil1 {fill:#FCFAD8}
+    .fil2 {fill:#FEFEFE}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M889 1586l1069 -1 4 104 -1068 1 -5 -104zm575 -227l49 -4 408 1 40 2 2 39 0 21 -1 40 -499 1 1 -100zm-575 59l1 -521 446 2 1 557 -448 3 0 -41zm574 -288l499 -4 -2 103 -493 0 -4 -99zm1 -231l497 -3 0 100 -495 2 -2 -99zm-371 -361l664 2 0 100 -664 1 0 -103zm-556 1461l-2 22c282,-19 927,-2 1274,-2 141,0 291,25 366,-62 66,-76 42,-267 42,-386 0,-186 9,-1190 -1,-1286l-1581 -3 -3 911c0,150 0,300 0,450 1,161 26,300 -95,356z"/>
+  <polygon class="fil1" points="889,1459 1337,1456 1336,899 890,897 889,1418 "/>
+  <polygon class="fil2" points="894,1690 1962,1689 1958,1585 889,1586 "/>
+  <polygon class="fil3" points="1093,641 1757,640 1757,540 1093,538 "/>
+  <polygon class="fil2" points="1463,1459 1962,1458 1963,1418 1963,1397 1961,1358 1921,1356 1513,1355 1464,1359 "/>
+  <polygon class="fil2" points="1467,1229 1960,1229 1962,1126 1463,1130 "/>
+  <polygon class="fil2" points="1466,998 1961,996 1961,896 1464,899 "/>
+  <path class="fil4" d="M535 2021l2 -22c-20,6 -18,-2 -32,8 21,24 -7,7 30,14z"/>
+  <path class="fil5" d="M278 1233c0,130 1,389 1,523 1,134 2,144 6,154 3,11 9,23 18,36 10,13 22,26 38,37 16,11 35,20 50,27 16,6 29,12 52,13 23,1 56,-1 85,-14 28,-12 52,-34 70,-56 17,-21 28,-41 33,-70 4,-28 3,-65 2,-197 0,-131 1,-358 1,-471 0,-114 -1,-115 -4,-115 -2,0 -6,1 -58,1 -51,0 -149,-1 -198,-1 -49,0 -49,1 -56,1 -8,1 -24,1 -32,1 -7,0 -7,0 -7,1 0,0 -1,1 -1,130z"/>
+  <rect class="fil5 str0" transform="matrix(0.123738 -0.136106 0.145835 0.132584 253.035 645.216)" width="794" height="741"/>
+  <rect class="fil5 str0" transform="matrix(0.091331 -0.100459 0.107641 0.0978599 2133.51 2211.23)" width="794" height="741"/>
+  <rect class="fil5 str0" transform="matrix(0.00071515 -0.0889832 0.0953443 0.000766274 2507.62 1061.14)" width="794" height="741"/>
+ </g>
+</svg>

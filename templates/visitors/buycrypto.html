@@ -1,0 +1,127 @@
+{% extends 'basefiles/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+ <section class="buycrypto-header-intro">
+  <div class="buycrypto-caption">
+      <p>
+        buy bitcoin
+      <span class="caption-line"></span>
+      </p>
+  </div>
+  <div class="image-banner">
+    <div class="img-container">
+        <img src="{% static 'images/two-right-phones.png' %}" alt="banner image">
+    </div>
+  </div>
+ </section>
+
+  </div>
+
+    <!-- site main body -->
+    <main class="site-body buycrypto-main buycrypto-panel">
+    <section class="purchase-section">
+    <div class="float-left">
+      <h4>Purchase Steps</h4>
+      <!-- first item -->
+      <div class="flex-container">
+        <div class="icon-wrapper">
+          <div class="img-container">
+            <img src="{% static 'images/purchase-steps-icon1.svg' %}" alt="purchase icon">
+            <span class="dotted-line"></span>
+          </div>
+       </div>
+       <div class="text-content">
+           <p>
+               Choose the fiat you want to pay for, the currency you want to buy and the third-party service provider, and click the buy button.
+           </p>
+       </div>
+    </div>
+
+    <!-- second item -->
+      <div class="flex-container">
+        <div class="icon-wrapper">
+          <div class="img-container">
+            <img src="{% static 'images/purchase-steps-icon2.svg' %}" alt="purchase icon">
+            <span class="dotted-line"></span>
+          </div>
+       </div>
+       <div class="text-content">
+           <p>
+              Verify your identity information on HuluEx and third-party service provider websites, and complete the payment.
+           </p>
+       </div>
+    </div>
+
+    <!-- third item -->
+      <div class="flex-container">
+        <div class="icon-wrapper">
+          <div class="img-container">
+            <img src="{% static 'images/purchase-steps-icon3.svg' %}" alt="purchase icon">
+            <span class="dotted-line"></span>
+          </div>
+       </div>
+       <div class="text-content">
+           <p>
+               Check if the coins you bought in HuloEx wallet coin financial record and check order details in the website of service provider.
+           </p>
+       </div>
+    </div>
+    </div>
+    <div class="float-right">
+      <h4>Purchase</h4>
+      <form>
+          <div class="flex-container">
+            <div class="form-field">
+                <input type="text" name="text" placeholder="enter USD">
+            </div>
+            <div class="form-field">
+              <div class="select-field">
+             <select id="validate-value">
+                 <option></option>
+                 <option value="eth">ETH</option>
+                 <option value="btc" selected>BTC</option>
+                <option value="usdt">USDT</option>
+                <option value="busd">BUSD</option>
+             </select>
+             </div>
+            </div>
+          </div>
+          <div class="payment-method">
+            <p><span class="straight-line"></span> payment method <span class="straight-line"></span></p>
+            <div class="select-payment">
+              <select id="select">
+                <option></option>
+                <option value="payment"selected="">select payment method</option>
+              </select>
+            </div>
+          </div>
+          <div class="payment-gateways">
+            <div class="img-container">
+              <img src="{% static 'images/payment-gateway.svg' %}" alt="payment gateway">
+            </div>
+          </div>
+          <div class="submit-btn">
+          <button><a href="./signup.html">Purchase</a></button>
+          </div>
+      </form>
+    </div>
+    </section>
+
+    </main>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

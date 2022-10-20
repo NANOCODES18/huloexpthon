@@ -1,0 +1,537 @@
+{% extends 'basefiles/base.html' %}
+{% load static %}
+{% block content %}
+    
+
+ <section class="intro-text header-intro">
+    <div class="flex">
+      <div class="left">
+        <p>The <strong class="capslock">future </strong> of <strong class="capslock">money</strong> is <strong class="capslock"> digital </strong>
+        </p>
+        <p>buy, sell , trade &amp; lend
+        cryptocurrencies.
+        </p>
+        <a class="get-started-cta" href="./signup.html" >Get Started</a>
+    </div>
+    <div class="right">
+    <div class="img-container">
+    <img src="{% static 'images/two-right-phones.png' %}">
+    </div>
+    </div>
+  </div>
+ </section>
+</div>
+
+<!-- site main body -->
+<main class="site-body index-main">
+ 
+<!-- main index page  section-->
+<section class="marquee-section">
+  <div class="marquee">
+  <marquee class="marquee-text">
+    <p> <span class="rectbox"></span> Distribution of Free HuloEX Token for deposits of up to &dollar;5,000 <span class="rectbox"></span> Hulo Exchange Token will be launched on Q4 of 2023 at &dollar;0.4 per token <span class="rectbox"></span> Compete with our Merchants who want to be Country Representatives of HuluEx with institution deposit balance of &dollar;10,000 to &dollar;35,000. <span class="rectbox"></span> Engage in contract trading to win more HuluEx tokens</p>
+  </marquee>
+</div>
+</section>
+
+
+ <section class="section-2">
+    <!-- round corner button -->
+    <span class="round-corner-btn left"></span>
+    <div class="deposit-cards-wrapper carousel owl-carousel">
+    <div class="deposit-card-container">
+        <div class="deposit-card">
+         <img src="{% static 'images/lets-begin.png' %}" alt="lets begin">
+        </div>
+    </div>
+    <div class="deposit-card-container">
+        <div class="deposit-card">
+         <img src="{% static 'images/huloex-token.png' %}" alt="huloex token">
+        </div>
+    </div>
+    <div class="deposit-card-container">
+        <div class="deposit-card">
+         <img src="./images/get-paid.png' %}" alt="get paid">
+        </div>
+    </div>
+    <div class="deposit-card-container">
+        <div class="deposit-card">
+          <img src="{% static 'images/q3.png' %}" alt="q3">
+        </div>
+    </div>
+    </div>
+    <!-- round corner button -->
+    <span class="round-corner-btn right"></span>
+ </section>
+
+ <!-- main index page section  || no code for now-->
+<section class="section-3 trade-chart">
+<table class="tabular-data">
+  <thead>
+    <tr class="trade-data-row">
+      <th class="table-head">name</th>
+      <th class="table-head">last price</th>
+      <th class="table-head">change 24H</th>
+      <th class="table-head">volume 24H</th>
+      <th class="table-head">low 24H</th>
+      <th class="table-head">high 24H</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- first row -->
+    <tr class="trade-data-row">
+      <td class="table-data">
+        <div class="cryptocurrency-pairs currency-symbol">
+          <div class="image-continer first-symbol">
+            <img src="{% static 'images/BTC.png' %}">
+          </div>
+          <div class="image-continer second-symbol">
+            <img src="{% static 'images/USDT.png' %}">
+          </div>
+          <span class="currency-symbol">BTC / USDT</span>
+        </div>
+      </td>
+      <td class="table-data">
+        <div class="updated-table-data table-dynamic-text-green">
+         <span class="table-dynamic-text">25,502.17</span>
+        </div>
+        <span class="table-static-text">&dollar;25,489.29</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text table-static-text-green">+4.18%</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">&dollar;29,949,275.69</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">25,281.37</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">26,471.55</span>
+      </td>
+    </tr>
+
+    <!-- second row -->
+    <tr class="trade-data-row">
+      <td class="table-data">
+        <div class="cryptocurrency-pairs currency-symbol">
+          <div class="image-continer first-symbol">
+            <img src="{% static 'images/ETH.png' %}">
+          </div>
+          <div class="image-continer second-symbol">
+            <img src="{% static 'images/USDT.png' %}">
+          </div>
+          <span class="currency-symbol">ETH / USDT</span>
+        </div>
+      </td>
+      <td class="table-data">
+        <div class="updated-table-data table-dynamic-text-green">
+         <span class="table-dynamic-text">1,847.61</span>
+        </div>
+        <span class="table-static-text">&dollar;1,846.67</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text table-static-text-green">+7.48%</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">&dollar;11,369,513.07</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">1,799.65</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">1,887.52</span>
+      </td>
+    </tr>
+
+    <!-- third row -->
+    <tr class="trade-data-row">
+      <td class="table-data">
+        <div class="cryptocurrency-pairs currency-symbol">
+          <div class="image-continer first-symbol">
+            <img src="{% static 'images/MATIC.png' %}">
+          </div>
+          <div class="image-continer second-symbol">
+            <img src="{% static 'images/USDT.png' %}">
+          </div>
+          <span class="currency-symbol">MATIC / USDT</span>
+        </div>
+      </td>
+      <td class="table-data">
+        <div class="updated-table-data table-dynamic-text-green">
+         <span class="table-dynamic-text">1.026</span>
+        </div>
+        <span class="table-static-text">&dollar;1.02</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text table-static-text-green">+6.56%</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">&dollar;1,328,575.68</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">0.989</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">1.096</span>
+      </td>
+    </tr>
+
+    <!--fourth row -->
+    <tr class="trade-data-row">
+      <td class="table-data">
+        <div class="cryptocurrency-pairs currency-symbol">
+          <div class="image-continer first-symbol">
+            <img src="{% static 'images/BTC.png' %}">
+          </div>
+          <div class="image-continer second-symbol">
+            <img src="{% static 'images/USDC.png' %}">
+          </div>
+          <span class="currency-symbol">BTC / USDC</span>
+        </div>
+      </td>
+      <td class="table-data">
+        <div class="updated-table-data table-dynamic-text-red">
+         <span class="table-dynamic-text">23,872.26</span>
+        </div>
+        <span class="table-static-text">&dollar;25,433.07</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text table-static-text-red">-2.13%</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">&dollar;1,209,561.29</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">23,388</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">24,416.04</span>
+      </td>
+    </tr>
+
+    <!-- fifth row -->
+    <tr class="trade-data-row">
+      <td class="table-data">
+        <div class="cryptocurrency-pairs currency-symbol">
+          <div class="image-continer first-symbol">
+            <img src="{% static 'images/ETH.png' %}">
+          </div>
+          <div class="image-continer second-symbol">
+            <img src="{% static 'images/BTC.png' %}">
+          </div>
+          <span class="currency-symbol">ETH / BTC</span>
+        </div>
+      </td>
+      <td class="table-data">
+        <div class="updated-table-data table-dynamic-text-green">
+         <span class="table-dynamic-text">0.07198</span>
+        </div>
+        <span class="table-static-text">&dollar;1,695.21</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text table-static-text-green">+2.56%</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">&dollar;1,159,425.58</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">0.070058</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">0.072806</span>
+      </td>
+    </tr>
+
+    <!-- sixth row -->
+    <tr class="trade-data-row">
+      <td class="table-data">
+        <div class="cryptocurrency-pairs currency-symbol">
+          <div class="image-continer first-symbol">
+            <img src="{% static 'images/XRP.png' %}">
+          </div>
+          <div class="image-continer second-symbol">
+            <img src="{% static 'images/USDT.png' %}">
+          </div>
+          <span class="currency-symbol">XRP / USDT</span>
+        </div>
+      </td>
+      <td class="table-data">
+        <div class="updated-table-data table-dynamic-text-green">
+         <span class="table-dynamic-text">0.4243</span>
+        </div>
+        <span class="table-static-text">&dollar;0.42</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text table-static-text-green">+6.13%</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">&dollar;1,022,255.19</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">0.411</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">0.429</span>
+      </td>
+    </tr>
+
+    <!-- sixth row -->
+    <tr class="trade-data-row">
+      <td class="table-data">
+        <div class="cryptocurrency-pairs currency-symbol">
+          <div class="image-continer first-symbol">
+            <img src="{% static 'images/SHIB.png' %}">
+          </div>
+          <div class="image-continer second-symbol">
+            <img src="{% static 'images/USDT.png' %}">
+          </div>
+          <span class="currency-symbol">SHIB / USDT</span>
+        </div>
+      </td>
+      <td class="table-data">
+        <div class="updated-table-data table-dynamic-text-green">
+         <span class="table-dynamic-text">0.09464</span>
+        </div>
+        <span class="table-static-text">&dollar;0.09</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text table-static-text-green">+9.25%</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">&dollar;738,132.17</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">0.08782</span>
+      </td>
+      <td class="table-data">
+        <span class="table-static-text">0.10271</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="goto-market">
+  <a href="./market.html" style="text-align:center;font-size:0.822rem;text-transform:capitalize;display:block;color:#000;margin-top:1.4rem;border-bottom:1px solid #ddd;font-weight:600;padding-bottom:1.4rem">show all market</a>
+</div>
+</section>
+
+
+
+<section class="section-4">
+    <a class="getstarted-cta" href="./login.html">get started</a>
+    <div class="chase-icon-container flex">
+     <div class="chase-item">
+        <div class="img-container">
+          <img src="{% static 'images/chase-icon-1.svg' %}"/>
+        </div>
+        <h3>Register</h3>
+        <p>Create Your Account on Our Exchange In a few simple clicks</p>
+     </div>
+
+     <div class="chase-item">
+        <div class="img-container">
+          <img src="{% static 'images/chase-icon-2.svg' %}"/>
+        </div>
+        <h3>Verify</h3>
+        <p>Verify your identity with one of our trusted
+            verification partners
+        </p>
+     </div>
+
+     <div class="chase-item">
+        <div class="img-container">
+          <img src="{% static 'images/chase-icon-3.svg' %}"/>
+        </div>
+        <h3>Deposit</h3>
+        <p>Securely connect your bank account to deposit funds</p>
+     </div>
+
+     <div class="chase-item">
+        <div class="img-container">
+          <img src="{% static 'images/chase-icon-4.svg' %}"/>
+        </div>
+        <h3>Trade</h3>
+        <p>Buy Sell and Swap Digital Assets 24/7</p>
+     </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="section-5 exchange-converter">
+    <div class="flex">
+     <div class="btc-eth">
+        <h4>
+        <a href="#">converter </a>
+        <a href="#">exchange </a>
+        </h4>
+        <div class="btn-row">
+            <input type="number" name="number">
+            <label>BTC<span class="fa fa-angle-down"></span></label>
+        </div>
+        <div class="btc-division-line">
+            <span class="right"></span>
+            <span class="left"></span>
+        </div>
+        
+        <div class="btn-row">
+            <input type="number" name="number">
+            <label>ETH<span class="fa fa-angle-down"></span></label>
+        </div>
+        <button class="convert-cta">convert</button>
+     </div>
+     <div>
+        <div class="img-container">
+            <img src="{% static 'images/desktop-right.svg' %}">
+        </div>
+     </div>
+    </div>
+
+</section>
+
+
+
+<section class="tradeview">
+ <div class=" correctwidth">
+        <div class="row text-center" style="margin-right:10px;margin-left:10px;">
+              <!--<div class="col" style="z-index:-1;"><img class="img-fluid" src="assets/img/footerbg.png' %} "></div>-->
+          </div>
+        <div class="row" style="z-index:998;margin-bottom:-30px;">
+        
+              <!-- TradingView Widget BEGIN -->
+        
+        <!-- TradingView Widget END -->
+        </div>
+        <section>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js">{
+        "width": "100%",
+        "height": "500",
+        "defaultColumn": "overview",
+        "screener_type": "crypto_mkt",
+        "displayCurrency": "USD",
+        "locale": "en"
+        }
+        </script>
+        </section>
+        </div>
+        <p><a href="https://www.tradingview.com/markets/stocks-usa/market-movers-large-cap/" target="_blank" style="text-align:center;display:block;font-size:var(--sm-font);">show all markets</a></p>
+</section>
+
+
+
+<section class="section-6">
+    <div class="flex">
+     <div class="image left">
+        <div class="img-container">
+            <img src="{% static 'images/android-left-img.png' %} " alt="phone icon"/>
+        </div>
+     </div>
+        <div class="text right">
+            <h4>get trading</h4>
+            <div class="text-body">
+                <dl> 
+                    <div class="aside-items">
+                    <div class="img-container">
+                        <img src="{% static 'images/aside1-icon.svg' %}">
+                        <span class="draw-dotted-line"></span>
+                    </div>
+                    <div>
+                    <dt>Trade with crypto and digital assets in realtime</dt>
+                    <dd>Our Trading Panel is optimised to provide real market<br>
+                     and data allows trade with digital assets and <br>
+                      cryptocurrencies with ease and profits
+                    </dd>
+                    </div>
+                    </div>
+                    <div class="aside-items">
+                    <div class="img-container">
+                    <img src="{% static 'images/aside2-icon.svg' %}">
+                    <span class="draw-dotted-line"></span>
+                    </div>
+                    <div>
+                    <dt>Buy and Sell Cryptocurrency assets with HoluEX</dt>
+                    <dd>
+                        Buy and Sell USDT, BNB, DOGE, ADA <br>
+                        and other currencies comfortable with fair <br>
+                        market prices
+                    </dd>
+                   </div>
+                   </div>
+                   <div class="aside-items">
+                   <div class="img-container">
+                    <img src="{% static 'images/aside2-icon.svg' %}">
+                    <span class="draw-dotted-line"></span>
+                   </div>
+                    <div>
+                    <dt>Trade and Exchange 24/7</dt>
+                    <dd>Exchange anything and anywhere with our desktop <br>
+                    and mobile friendly user interface.
+                    </dd>
+                   </div>
+                   </div>
+                   </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- index page division line -->
+<div class="division-line"></div>
+
+
+
+
+
+<section class="section-7">
+<div class="customer-enquiries flex">
+<div class="container flex-basis">
+    <div class="avatar-icon left">
+        <img src="{% static 'images/avater-icon-1.svg' %}">
+    </div>
+    <div class="text-description">
+        <h4>24/7 chat support</h4>
+        <p>Get 24/7 chat support with our friendly <br>
+        customer services agents at your service
+        </p>
+        <span class="learn-more"><a href="./login.html">chat now</a></span>
+        <span></span>
+    </div>
+</div>
+<div class="container flex-basis">
+    <div class="avatar-icon left">
+        <img src="{% static 'images/avater-icon-2.svg' %}">
+    </div>
+    <div class="text-description">
+        <h4>FAQ</h4>
+        <p>View FAQs for detailed instruction on<br>
+         specific features.
+        </p>
+        <span class="learn-more"><a href="./login.html">learn more</a></span>
+        <span></span>
+    </div>
+</div>
+<div class="container flex-basis">
+    <div class="avatar-icon left">
+        <img src="{% static 'images/avater-icon-3.svg' %}">
+    </div>
+    <div class="text-description">
+        <h4>Blog</h4>
+        <p>steady update with the latest stories and <br>
+        commentary
+        </p>
+        <span class="learn-more"><a href="./login.html">learn more</a></span>
+        <span></span>
+    </div>
+</div>
+</div>
+</section>
+</main>
+
+
+
+
+
+{% endblock content %}
+    

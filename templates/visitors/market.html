@@ -1,0 +1,2532 @@
+{% extends 'basefiles/base.html' %}
+{% load static %}
+{% block content %}
+
+ <section class="market-header-intro">
+    <div class="market-caption">
+        <p>
+          market
+        <span class="caption-line"></span>
+        </p>
+    </div>
+    <div class="image-banner">
+      <div class="img-container">
+          <img src="{% static 'images/two-right-phones.png' %} " alt="banner image">
+      </div>
+    </div>
+   </section>
+  
+  
+    </div>
+  
+      <!-- site main body -->
+      <main class="site-body market-main market-panel">
+        
+         <section class="market-chart-placeholder">
+             <div class="market-chart-1">
+              <img src="{% static 'images/market-chart-1.svg' %} " alt="market chart">
+             </div>
+             <div class="market-chart-2">
+              <img src="{% static 'images/market-chart-2.svg' %} " alt="market chart">
+             </div>
+         </section>
+        
+  
+        <!-- handcoded tradeview  -->
+         <!-- <section class="tradeview">
+            <div class="tradeview-header">
+              <div class="flex-container">
+                  <menu>
+                      <li>usdt</li>
+                      <li>btc</li>
+                      <li>eth</li>
+                      <li>
+                          <input type="search" name="search" id="search" placeholder="search coin name">
+                      </li>
+                  </menu>
+              </div>
+            </div> 
+            <div class="tradeview-body">
+              <div class="trade-chart">
+                  <table class="tabular-data">
+                     <thead>
+                      <tr class="trade-data-row">
+                      <th class="table-head">name</th>
+                      <th class="table-head">last price</th>
+                      <th class="table-head">change 24H</th>
+                      <th class="table-head">volume 24H</th>
+                      <th class="table-head">low 24H</th>
+                      <th class="table-head">high 24H</th>
+                      </tr>
+                     </thead>
+                      <tbody></tbody>
+                  </table>
+              </div>
+            </div>
+         </section> -->
+  
+  
+         <!-- embeded trade view || soource--bnax.com -->
+         <section>
+           <div class="page__container">
+          <article class="page__content" role="main">
+            <div class="page__header">
+              <div class="section-selector">
+                <div class="section-selector__tabs">
+                                                  <button class="section-selector__tab section-selector__tab_current" type="button" data-key = "USDT">USDT</button>
+                                                  <button class="section-selector__tab" type="button" data-key = "USDC">USDC</button>
+                                                  <button class="section-selector__tab" type="button" data-key = "BTC">BTC</button>
+                                                  <button class="section-selector__tab" type="button" data-key = "ETH">ETH</button>
+                                                </div>
+              </div>
+              <label class="search">
+                <input class="search__field" type="text" id = "marketSearch"/>
+                <div class="search__placeholder">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.2426 13.2426C10.8995 15.5858 7.1005 15.5858 4.75736 13.2426C2.41421 10.8995 2.41421 7.1005 4.75736 4.75736C7.1005 2.41421 10.8995 2.41421 13.2426 4.75736C15.5858 7.1005 15.5858 10.8995 13.2426 13.2426ZM13.2426 13.2426L17 17" stroke="#0A0F38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg><span class="search__placeholder-text">Search coin name</span>
+                </div>
+              </label>
+            </div>
+            <div class="page__table">
+                                      <table class="table-view" cellpadding="0" data-key = "USDT">
+                <thead class="table-view__header">
+                  <tr class="table-view__row">
+                    <th class="table-view__item" style="width: 20px">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke="#0A0F38" stroke-opacity="0.2" stroke-width="1.2"></path>
+                      </svg>
+                    </th>
+                    <th class="table-view__item">Pair                  </th>
+                    <th class="table-view__item">Last Price                  </th>
+                    <th class="table-view__item">Change 24H                  </th>
+                    <th class="table-view__item">Low 24H                  </th>
+                    <th class="table-view__item">High 24H                  </th>
+                    <th class="table-view__item">Volume 24H                  </th>
+                  </tr>
+                </thead>
+                <tbody class="table-view__content">
+                                  <tr class="table-view__row" data-href = "/exchange/BTC-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BTC</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">24,818.06</span>
+                      </div>
+                      <span class="table-view__text">$24,822.27</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+5.79%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">24,380.4</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">25,186.81</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$34,226,010.25</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ETH-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ETH</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">1,823.55</span>
+                      </div>
+                      <span class="table-view__text">$1,823.86</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+5.74%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1,782.19</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1,854.54</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$14,867,434.85</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/LINK-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LINK</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">9.007</span>
+                      </div>
+                      <span class="table-view__text">$9</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+5.78%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">8.896</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">9.573</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$740,533.35</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/XRP-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>XRP</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.3905</span>
+                      </div>
+                      <span class="table-view__text">$0.39</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+5.07%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.3854</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.3995</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$649,574.77</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/SHIB-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>SHIB</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.000013</span>
+                      </div>
+                      <span class="table-view__text">$0.00001</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+7.69%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000013</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000013</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$584,981.49</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/DOGE-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>DOGE</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.07339</span>
+                      </div>
+                      <span class="table-view__text">$0.07</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+3.61%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.07152</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.07654</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$566,576.15</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ATOM-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ATOM</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">11.71</span>
+                      </div>
+                      <span class="table-view__text">$11.71</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+1.73%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">11.28</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">12.45</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$511,113.22</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/FTM-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>FTM</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.4073</span>
+                      </div>
+                      <span class="table-view__text">$0.4</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+10.04%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.3778</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.4129</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$459,723.38</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/MATIC-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>MATIC</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.955</span>
+                      </div>
+                      <span class="table-view__text">$0.95</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+5.48%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.934</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.974</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$417,522.80</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ROSE-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ROSE</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.10788</span>
+                      </div>
+                      <span class="table-view__text">$0.1</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+1.17%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.10378</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.11607</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$365,067.10</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/LTC-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LTC</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">68.02</span>
+                      </div>
+                      <span class="table-view__text">$68.03</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+11.09%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">66.76</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">70.23</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$345,810.32</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ENS-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ENS</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">16.56</span>
+                      </div>
+                      <span class="table-view__text">$16.56</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+5.13%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">15.95</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">17.25</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$247,464.57</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/TRX-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>TRX</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.07391</span>
+                      </div>
+                      <span class="table-view__text">$0.07</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+6.26%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.073</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.07472</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$223,790.37</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/DYDX-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>DYDX</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">2.451</span>
+                      </div>
+                      <span class="table-view__text">$2.45</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+2.98%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">2.394</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">2.581</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$193,806.64</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/UNI-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>UNI</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">9.1</span>
+                      </div>
+                      <span class="table-view__text">$9.1</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+7.47%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">8.69</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">9.15</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$169,597.15</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/BCH-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BCH</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">143.92</span>
+                      </div>
+                      <span class="table-view__text">$143.94</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+4.67%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">141.34</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">148.23</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$150,590.84</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/AAVE-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>AAVE</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">105.6</span>
+                      </div>
+                      <span class="table-view__text">$105.61</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+6.06%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">102.2</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">107.1</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$131,458.91</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/BAT-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BAT</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.454</span>
+                      </div>
+                      <span class="table-view__text">$0.45</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+3.90%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.4453</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.4912</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$123,972.54</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/SUSHI-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>SUSHI</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">1.538</span>
+                      </div>
+                      <span class="table-view__text">$1.53</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+3.64%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1.49</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1.6</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$68,244.97</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/YFI-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>YFI</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">12,126.78</span>
+                      </div>
+                      <span class="table-view__text">$12,128.84</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+9.28%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">11,575.6</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">12,348.56</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$67,485.97</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/QNT-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>QNT</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">130.8</span>
+                      </div>
+                      <span class="table-view__text">$130.82</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+7.34%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">128.3</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">136.1</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$66,342.83</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/HOT-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>HOT</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.002677</span>
+                      </div>
+                      <span class="table-view__text">$0.002</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+4.30%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.002542</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.002795</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$60,628.52</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/1INCH-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>1INCH</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.861</span>
+                      </div>
+                      <span class="table-view__text">$0.86</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+1.86%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.841</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.912</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$54,893.16</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/CAKE-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>CAKE</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">4.58</span>
+                      </div>
+                      <span class="table-view__text">$4.58</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+5.11%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">4.54</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">4.76</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$52,170.36</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/SXP-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>SXP</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.477</span>
+                      </div>
+                      <span class="table-view__text">$0.47</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+3.98%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.467</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.494</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$43,850.57</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/COMP-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>COMP</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">64.1</span>
+                      </div>
+                      <span class="table-view__text">$64.11</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+4.98%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">62</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">65.7</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$40,649.79</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/NEO-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>NEO</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">11.832</span>
+                      </div>
+                      <span class="table-view__text">$11.83</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+4.67%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">11.553</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">12.155</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$39,575.14</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/MKR-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>MKR</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">1,153.1504</span>
+                      </div>
+                      <span class="table-view__text">$1,153.34</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+4.78%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1,128.4093</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1,185.4214</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$20,978.20</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ONT-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ONT</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.294</span>
+                      </div>
+                      <span class="table-view__text">$0.29</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+6.02%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.2845</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.2982</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$18,056.56</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ZRX-USDT">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ZRX</span> / USDT</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.3776</span>
+                      </div>
+                      <span class="table-view__text">$0.37</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+7.76%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.3611</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.3786</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$15,221.31</span>
+                    </th>
+                  </tr>
+                                </tbody>
+              </table>
+                                      <table class="table-view" cellpadding="0" data-key = "USDC" style = "display: none;">
+                <thead class="table-view__header">
+                  <tr class="table-view__row">
+                    <th class="table-view__item" style="width: 20px">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke="#0A0F38" stroke-opacity="0.2" stroke-width="1.2"></path>
+                      </svg>
+                    </th>
+                    <th class="table-view__item">Pair                  </th>
+                    <th class="table-view__item">Last Price                  </th>
+                    <th class="table-view__item">Change 24H                  </th>
+                    <th class="table-view__item">Low 24H                  </th>
+                    <th class="table-view__item">High 24H                  </th>
+                    <th class="table-view__item">Volume 24H                  </th>
+                  </tr>
+                </thead>
+                <tbody class="table-view__content">
+                                  <tr class="table-view__row" data-href = "/exchange/BTC-USDC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BTC</span> / USDC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">23,078.25</span>
+                      </div>
+                      <span class="table-view__text">$24,820.19</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.35%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">22,664.29</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">23,419.82</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,477,497.01</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ETH-USDC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ETH</span> / USDC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">1,695.71</span>
+                      </div>
+                      <span class="table-view__text">$1,823.7</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.40%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1,657.01</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">1,724.45</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$752,862.62</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/LTC-USDC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LTC</span> / USDC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">58.6</span>
+                      </div>
+                      <span class="table-view__text">$63.02</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-3.29%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">57.5</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">60.6</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$6,107.18</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/TRX-USDC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>TRX</span> / USDC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.06874</span>
+                      </div>
+                      <span class="table-view__text">$0.07</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.83%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0677</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.06951</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$11,308.52</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/XRP-USDC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>XRP</span> / USDC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.3629</span>
+                      </div>
+                      <span class="table-view__text">$0.39</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-2.15%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.3585</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.3714</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$17,877.12</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/LINK-USDC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LINK</span> / USDC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">8.34</span>
+                      </div>
+                      <span class="table-view__text">$8.96</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.45%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">8.26</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">8.89</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$7,529.20</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/BCH-USDC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BCH</span> / USDC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">134.2</span>
+                      </div>
+                      <span class="table-view__text">$144.32</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-3.20%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">131.4</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">138.6</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,602.61</span>
+                    </th>
+                  </tr>
+                                </tbody>
+              </table>
+                                      <table class="table-view" cellpadding="0" data-key = "BTC" style = "display: none;">
+                <thead class="table-view__header">
+                  <tr class="table-view__row">
+                    <th class="table-view__item" style="width: 20px">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke="#0A0F38" stroke-opacity="0.2" stroke-width="1.2"></path>
+                      </svg>
+                    </th>
+                    <th class="table-view__item">Pair                  </th>
+                    <th class="table-view__item">Last Price                  </th>
+                    <th class="table-view__item">Change 24H                  </th>
+                    <th class="table-view__item">Low 24H                  </th>
+                    <th class="table-view__item">High 24H                  </th>
+                    <th class="table-view__item">Volume 24H                  </th>
+                  </tr>
+                </thead>
+                <tbody class="table-view__content">
+                                  <tr class="table-view__row" data-href = "/exchange/ETH-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ETH</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.073478</span>
+                      </div>
+                      <span class="table-view__text">$1,879.21</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.06%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.072786</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.073828</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,525,049.18</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/XRP-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>XRP</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00001573</span>
+                      </div>
+                      <span class="table-view__text">$0.4</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.76%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001569</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001598</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$94,883.99</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/LINK-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LINK</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.000363</span>
+                      </div>
+                      <span class="table-view__text">$9.28</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.14%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0003607</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0003852</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$81,584.89</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/LTC-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LTC</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.002539</span>
+                      </div>
+                      <span class="table-view__text">$64.93</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.85%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.002533</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.002593</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$64,449.50</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/MATIC-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>MATIC</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00003849</span>
+                      </div>
+                      <span class="table-view__text">$0.98</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.31%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00003796</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0000388</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$43,989.34</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/FTM-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>FTM</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.00001641</span>
+                      </div>
+                      <span class="table-view__text">$0.41</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+4.51%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001537</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001662</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$43,989.34</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ATOM-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ATOM</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0004721</span>
+                      </div>
+                      <span class="table-view__text">$12.07</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-4.36%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000463</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0004981</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$38,874.30</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/DOGE-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>DOGE</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00000295</span>
+                      </div>
+                      <span class="table-view__text">$0.07</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-2.71%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00000293</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00000304</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$30,945.99</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/UNI-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>UNI</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.0003664</span>
+                      </div>
+                      <span class="table-view__text">$9.37</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+1.75%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0003534</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0003698</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$24,807.94</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ROSE-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ROSE</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00000435</span>
+                      </div>
+                      <span class="table-view__text">$0.11</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-4.83%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00000423</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00000463</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$21,738.92</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/AAVE-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>AAVE</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.004256</span>
+                      </div>
+                      <span class="table-view__text">$108.84</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.33%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.004167</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.004279</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$13,554.86</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/TRX-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>TRX</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.00000297</span>
+                      </div>
+                      <span class="table-view__text">$0.07</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.34%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00000294</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000003</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$13,043.35</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/QNT-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>QNT</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.005266</span>
+                      </div>
+                      <span class="table-view__text">$134.67</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+1.61%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.005172</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.005461</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$12,531.85</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/BCH-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BCH</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0058</span>
+                      </div>
+                      <span class="table-view__text">$148.33</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.03%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00576</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0059</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$9,718.58</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/BAT-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BAT</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00001829</span>
+                      </div>
+                      <span class="table-view__text">$0.46</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-2.08%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001817</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001978</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$7,161.06</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/YFI-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>YFI</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.4886</span>
+                      </div>
+                      <span class="table-view__text">$12,496.04</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+3.66%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.4685</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.4964</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$5,626.54</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/DYDX-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>DYDX</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00009876</span>
+                      </div>
+                      <span class="table-view__text">$2.52</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-2.97%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00009729</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00010261</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$5,370.79</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/CAKE-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>CAKE</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0001848</span>
+                      </div>
+                      <span class="table-view__text">$4.72</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.49%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0001845</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0001909</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$5,115.04</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/NEO-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>NEO</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.000477</span>
+                      </div>
+                      <span class="table-view__text">$12.19</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.84%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000471</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000485</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$5,115.04</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/SUSHI-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>SUSHI</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.000062</span>
+                      </div>
+                      <span class="table-view__text">$1.58</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-2.26%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0000611</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0000635</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$4,347.78</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ENS-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ENS</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0006671</span>
+                      </div>
+                      <span class="table-view__text">$17.06</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.85%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0006532</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0006925</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$3,836.28</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/COMP-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>COMP</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00259</span>
+                      </div>
+                      <span class="table-view__text">$66.23</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.35%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00252</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00263</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$3,580.53</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/SXP-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>SXP</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00001923</span>
+                      </div>
+                      <span class="table-view__text">$0.49</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.61%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001911</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001967</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$3,069.02</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/1INCH-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>1INCH</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00003476</span>
+                      </div>
+                      <span class="table-view__text">$0.88</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-3.97%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00003433</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00003628</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$2,046.02</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/MKR-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>MKR</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0464</span>
+                      </div>
+                      <span class="table-view__text">$1,186.68</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.16%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0457</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0473</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,790.26</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ZRX-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ZRX</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.00001519</span>
+                      </div>
+                      <span class="table-view__text">$0.38</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+1.91%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001467</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001524</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,534.51</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ONT-BTC">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ONT</span> / BTC</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.00001186</span>
+                      </div>
+                      <span class="table-view__text">$0.3</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.42%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00001164</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0000119</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$767.26</span>
+                    </th>
+                  </tr>
+                                </tbody>
+              </table>
+                                      <table class="table-view" cellpadding="0" data-key = "ETH" style = "display: none;">
+                <thead class="table-view__header">
+                  <tr class="table-view__row">
+                    <th class="table-view__item" style="width: 20px">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke="#0A0F38" stroke-opacity="0.2" stroke-width="1.2"></path>
+                      </svg>
+                    </th>
+                    <th class="table-view__item">Pair                  </th>
+                    <th class="table-view__item">Last Price                  </th>
+                    <th class="table-view__item">Change 24H                  </th>
+                    <th class="table-view__item">Low 24H                  </th>
+                    <th class="table-view__item">High 24H                  </th>
+                    <th class="table-view__item">Volume 24H                  </th>
+                  </tr>
+                </thead>
+                <tbody class="table-view__content">
+                                  <tr class="table-view__row" data-href = "/exchange/LINK-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LINK</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.00494</span>
+                      </div>
+                      <span class="table-view__text">$13.7</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.22%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.004927</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.005246</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$59,739.29</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/TRX-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>TRX</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.00004054</span>
+                      </div>
+                      <span class="table-view__text">$0.11</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.54%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00004001</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00004097</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$29,162.10</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/XRP-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>XRP</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0002141</span>
+                      </div>
+                      <span class="table-view__text">$0.59</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.65%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0002129</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0002182</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$19,866.85</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/LTC-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>LTC</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.03456</span>
+                      </div>
+                      <span class="table-view__text">$95.89</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.68%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.03445</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.03605</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$10,960.07</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/MATIC-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>MATIC</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0005243</span>
+                      </div>
+                      <span class="table-view__text">$1.45</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.10%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0005178</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000529</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$5,937.86</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ROSE-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ROSE</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.0000592</span>
+                      </div>
+                      <span class="table-view__text">$0.16</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-4.73%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0000577</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0000631</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$4,078.81</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ATOM-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ATOM</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00642</span>
+                      </div>
+                      <span class="table-view__text">$17.81</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-4.31%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00632</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00677</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$3,579.36</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/UNI-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>UNI</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.004982</span>
+                      </div>
+                      <span class="table-view__text">$13.82</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+1.73%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.004845</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.005056</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,720.31</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/NEO-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>NEO</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00648</span>
+                      </div>
+                      <span class="table-view__text">$17.98</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-0.46%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00643</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0066</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,304.11</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/ONT-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>ONT</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.000161</span>
+                      </div>
+                      <span class="table-view__text">$0.44</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.12%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000158</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.000162</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,304.11</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/HOT-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>HOT</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_green">
+                        <span class="table-view-change__text">0.00000147</span>
+                      </div>
+                      <span class="table-view__text">$0.004</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_green">+0.00%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00000142</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.00000151</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$1,082.13</span>
+                    </th>
+                  </tr>
+                                  <tr class="table-view__row" data-href = "/exchange/BAT-ETH">
+                    <th class="table-view__item">
+                      <button class="table-view__favorite" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 3.19213L12.0678 6.7423L12.2009 6.97078L12.4593 7.02673L16.4747 7.89625L13.7372 10.9599L13.5611 11.1571L13.5877 11.4201L14.0016 15.5077L10.2419 13.8509L10 13.7443L9.75805 13.8509L5.99844 15.5077L6.4123 11.4201L6.43893 11.1571L6.26277 10.9599L3.52533 7.89625L7.54073 7.02673L7.79914 6.97078L7.93221 6.7423L10 3.19213Z" stroke-width="1.2"></path>
+                        </svg>
+                      </button>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view__pair"><span class="table-view__label"><span>BAT</span> / ETH</span>
+                      </div>
+                    </th>
+                    <th class="table-view__item">
+                      <div class="table-view-change table-view-change_variant_red">
+                        <span class="table-view-change__text">0.00024889</span>
+                      </div>
+                      <span class="table-view__text">$0.69</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text table-view__text_red">-1.97%</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0002477</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">0.0002697</span>
+                    </th>
+                    <th class="table-view__item">
+                      <span class="table-view__text">$943.40</span>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+         </section>
+  
+      </main>
+      
+  
+      {% endblock content %}

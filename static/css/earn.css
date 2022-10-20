@@ -1,0 +1,241 @@
+/******************
+   earn style
+
+*******************/
+.section-2.earn-deposits .deposit-card{
+box-shadow: 0px 4px 31px -1px rgba(0, 0, 0, 0.14);
+border-radius: 12px;
+}
+
+
+.site-body.earn-main{
+margin-top:-120px;
+position:relative;
+z-index:1030;
+}
+.earn-page{
+padding:1rem;
+}
+.earn-page h3{
+color:#0A13DF;
+}
+.user-tasks.earn-page{
+padding:1rem;
+}
+.user-tasks.earn-page p{
+font-weight:600;
+font-size:0.8rem;
+margin-bottom:1rem;
+}
+.user-tasks.earn-page .bullet-num{
+display:inline-block;
+width:30px;
+height:30px;
+border-radius:50%;
+color:#0A13DF;
+background: rgba(53, 122, 255, 0.29);
+padding:0 0.8rem;
+line-height:30px;
+}
+.user-tasks.earn-page .box-container{
+margin-bottom:2rem;
+}
+.user-tasks.earn-page .img-container{
+background:#fff;
+-webkit-box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+-moz-box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+-o-box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+border-radius: 16px;
+padding:0.4rem;
+}
+
+
+
+
+/******************
+  deposit section styles
+*******************/
+.deposit-section.earn-page{
+ font-size:0.87rem;
+ font-weight:700;
+ text-align:center;
+ line-height:1.4;
+ padding:0rem 4rem;
+ }
+
+
+
+
+/******************
+  smart contract styles
+*******************/
+.smart-contract .box-container{
+font-size:0.8rem;
+font-weight:400;
+border-radius:8px;
+background: #FFFFFF;
+-webkit-box-shadow: 0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+-moz-box-shadow: 0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+-o-box-shadow: 0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+box-shadow: 0px 4px 31px -1px rgba(0, 0, 0, 0.09);
+border-radius: 12px;
+/*padding:1rem;*/
+margin-bottom:1rem;
+text-align:center;
+}
+.smart-contract .box-container .bottom{
+background: linear-gradient(180deg, rgba(196, 196, 196, 0) 7.04%, rgba(9, 18, 198, 0.12) 100%);
+border-radius:0 0 8px 8px;
+padding-bottom:1rem;
+}
+.smart-contract .box-container .img-container{
+height:120px;
+}
+.smart-contract .box-container .img-container img{
+height:100%;
+}
+.smart-contract .box-container .box-body,
+.smart-contract .box-container .box-header
+{
+padding:1rem;
+}
+.smart-contract .box-container h2{
+font-weight:800;
+font-size:1rem;
+color:#3675FA;
+margin-bottom:1rem;
+}
+.smart-contract .box-container p{
+text-align:center;
+font-weight:600;
+font-size:0.8rem;
+}
+.smart-contract .box-container .cta-btn{
+ background:#0A13DF;
+ padding:0.5rem;
+ border-radius:5rem;
+ width:100px;
+ text-align:center;
+ display:block;
+ color:#fff;
+ font-weight:600;
+ font-size:0.87rem;
+ margin:2rem auto;
+}
+
+
+/******************
+  Refer section styles
+*******************/
+.deposit-section,
+.refer-section{
+font-size:0.9rem;
+font-weight:500;
+padding:1rem;
+text-align:center;
+}
+.refer-section h4{
+color:#0A13DF;
+font-weight:600;
+font-size:0.95rem;
+}
+.refer-section .flex-wrapper >*{
+margin-bottom:1rem;
+}
+.refer-section p{
+font-size:0.87rem;
+}
+
+
+
+.earn-main .division-line{
+position:absolute;
+width:100%;
+z-index:1020;
+top:-34px;
+}
+.section-2.earn-deposits{
+z-index:1030;
+}
+
+
+
+/******************
+  Tablet device
+*******************/
+@media(min-width:380px){
+.site-body.earn-main{
+margin-top:-160px;
+}
+.refer-section .flex-wrapper{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-around;
+gap:4%;
+text-align:initial;
+align-items:center;
+}
+.refer-section .flex-wrapper >*{
+flex-basis:48%;
+}
+}
+
+
+
+
+/******************
+ desktop device
+*******************/
+@media(min-width:650px){
+.site-body.earn-main{
+margin-top:-200px;
+}
+.user-tasks.earn-page .flex{
+display:flex;
+flex-flow:row wrap;
+align-items:flex-end;
+justify-content:space-around;
+}
+.user-tasks.earn-page .flex > *{
+flex-basis:22%;
+}
+.smart-contract.earn-page{
+display:flex;
+flex-flow:row wrap;
+align-items:baseline;
+gap:4%;
+}
+.smart-contract.earn-page > *{
+flex:1 1 48%;
+height:100%;
+}
+
+/*.smart-contract.earn-page > *{
+flex:1 1 22%;
+}*/
+.refer-section .flex-wrapper >*{
+flex-basis:28%;
+}
+
+.deposit-section.earn-page .flex{
+display:flex;
+flex-flow:row wrap;
+align-items:center;
+justify-content:center;
+text-align:initial;
+}
+.deposit-section.earn-page .flex > *{
+flex:1 1 48%;
+}
+}
+
+
+/******************
+ Large desktop device
+*******************/
+@media(min-width:810px){
+.smart-contract.earn-page > *{
+flex:1 1 22%;
+}
+}

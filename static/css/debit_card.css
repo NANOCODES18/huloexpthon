@@ -1,0 +1,120 @@
+ /******************
+    debit card styles
+  *******************/
+  /* .debitcard.header-wrapper{
+    padding-bottom:0; 
+  } */
+  .intro-text.debitcard-section p{
+  font-weight:500;
+  font-size:1.2rem;
+  text-transform:initial;
+  }
+  .site-body.debitcard-main{
+    /* margin-top: calc(10px - 50vh); */
+    border:1px solid transparent;
+    padding-bottom:2rem;
+    }
+  .debitcard-panel{
+  padding:1rem;
+  margin:0 auto;
+  margin-top:-80px;
+  position: relative;
+  z-index:1000;
+  width:90%;
+  }
+  .debitcard-panel .card-container{
+  font-weight:400;
+  font-size:var(--sm-font);
+  background-color:#fff;
+  padding:0.8rem;
+  height:220px;
+  text-align:center;
+  background: #FFFFFF;
+  -webkit-box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.14);
+  -o-box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.14);
+  box-shadow:0px 4px 31px -1px rgba(0, 0, 0, 0.14);
+  border-radius:8px;
+  margin-bottom:1rem;
+  }
+  .debitcard-panel .img-container{
+  height:60px;
+  width:60px;
+  border-radius:50%;
+  background: rgba(10, 19, 223, 0.06);
+  padding:0.8rem;
+  display:flex;
+  margin:1rem auto;
+  /* align-items:center; */
+  }
+  .debitcard-panel .img-container img{
+  margin:auto;
+  }
+  .header-intro.debitcard-section img{
+  margin-bottom:-80px;
+  }
+
+
+
+  /******************
+    Tablet device
+  *******************/
+ @media(min-width:380px){
+ .header-intro.debitcard-section .flex{
+  display:block;
+  }
+  .debitcard-panel{
+  margin-top:-120px;
+  }
+ }
+
+ 
+ /**************************
+  mobile | Tablet
+ ****************************/
+ @media(min-width:450px){
+  .debitcard-panel .flex-container{
+  display:flex;
+  gap:4%;
+  flex-flow:row wrap;
+  justify-content:center;
+  }
+/*  .header-intro.debitcard-section img{
+  margin-bottom:-150px;
+  }
+*/ .debitcard-panel .card-container{
+  flex:1 1 24%; 
+ }
+ 
+ }
+
+
+
+  /******************
+    desktop device
+  *******************/
+  @media(min-width:650px){
+  
+ .header-intro.debitcard-section .flex{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  align-items:flex-start;
+  gap:0%;
+  padding:0 2.8rem;
+  }
+  .header-intro.debitcard-section .flex .left{
+  flex-basis:100%;
+  }
+
+  }
+  
+
+  /******************
+    large desktop device
+  *******************/
+  @media(min-width:810px){
+  .header-intro.debitcard-section img{
+  margin-bottom:-140px;
+  }
+  }

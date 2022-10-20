@@ -1,0 +1,263 @@
+/* ===========================
+MY WALLET STYLES
+=============================*/
+
+/* ==========================
+Coin Exchange Section
+=============================*/
+.mywallet-main .coin-exchange-section{
+box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-webkit-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-o-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+border-radius: 13px;
+padding:0.4rem 1rem;
+margin-bottom:1.4rem;
+}
+.mywallet-main .flex-container figure{
+padding:1rem;
+text-align:center;
+}
+.mywallet-main .flex-container>*{
+transition:0.5s ease;
+margin-bottom:0.6rem;
+}
+.mywallet-main .flex-container>*:hover{
+background: #3810FF;
+box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+border-radius: 16px;
+color:#FFFFFF;
+}
+
+.mywallet-main .flex-container .item-header{
+display:flex;
+flex-flow:row wrap;
+gap:4%;
+align-items:center;
+justify-content:center;
+margin-bottom:1rem;
+}
+.mywallet-main .flex-container figure p{
+/* color:#000000; */
+font-weight:600;
+font-size:1.4rem;
+line-height:39px;
+}
+.mywallet-main .flex-container .item-header .img-container{
+width:24px;
+height:24px;
+border-radius:50%;
+overflow:hidden;
+}
+.mywallet-main .flex-container .item-header span{
+font-weight:500;
+font-size:0.8rem;
+}
+
+.mywallet-main .flex-container .item-header .img-container img{
+height:100%;
+}
+
+
+
+
+/* ==========================
+Wallet Trade Section
+=============================*/
+.mywallet-main .wallet-trade-section{
+box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-webkit-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-o-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+border-radius: 13px;
+padding:1rem;
+}
+.mywallet-main .wallet-trade-section .img-container{
+width:45px;
+height:45px;
+background: rgba(77, 124, 255, 0.08);
+border-radius:50%;
+padding:0.6rem;
+margin-right:1rem;
+}
+
+.mywallet-main .wallet-trade-section figcaption h4{
+font-weight:600;
+font-size:0.722rem;
+}
+.mywallet-main .wallet-trade-section figcaption p{
+font-size:1.4rem;
+font-weight:500;
+}
+.mywallet-main .wallet-trade-section figure{
+display:flex;
+flex-direction:column;
+margin-bottom:1.4rem;
+justify-content:center;
+align-items:center;
+}
+
+
+/* ========================
+Display Grid Section
+==========================*/
+.display-grid-section .align-left .table-data .first-symbol{
+width:25px;
+height:25px;
+/* border:1px solid green; */
+}
+.display-grid-section .align-left .table-data.link{
+color:#3810FF;
+}
+
+
+
+
+.display-grid-section .align-right{
+/* padding:1rem; */
+}
+.display-grid-section .spot-to-contract{
+padding:0rem;
+}
+.display-grid-section .spot-to-contract .flex>*{
+margin:2rem 0rem;
+padding:1rem;
+margin-right:0.6rem;
+}
+.display-grid-section .align-right .barcode-container{
+padding:1rem;
+box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-webkit-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+-o-box-shadow: 0px 4px 26px -1px rgba(0, 0, 0, 0.05);
+border-radius: 13px;
+}
+.display-grid-section .align-right .barcode-cta-btn{
+background: #E0E0E0;
+border-radius:7px;
+/* margin-top:1rem; */
+display:flex;
+gap:2%;
+flex-flow:row wrap;
+justify-content:space-between;
+padding:0.2rem;
+}
+.display-grid-section .align-right .barcode-cta-btn>*{
+flex:1 1 48%;
+}
+.display-grid-section .align-right .barcode-cta-btn button{
+/* background-color:transparent; */
+color:#838383;
+cursor: pointer;
+display:inline-block;
+width:40%;
+padding:0.5rem;
+font-size:0.7rem;
+transition:0.5s ease;
+}
+.display-grid-section .align-right .barcode-cta-btn button:hover{
+background: #FFFFFF;
+box-shadow: 4px 0px 8px -1px rgba(150, 150, 150, 0.23);
+border-radius: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+Tablet screen
+===============================*/
+
+/* ===========================
+Desktop screen
+===============================*/
+@media(min-width:650px){
+.mywallet-main .flex-container{
+display:flex;
+flex-flow:row wrap;
+align-items:flex-start;
+gap:4%;
+}
+.mywallet-main .wallet-trade-section{
+display:flex;
+flex-flow:row wrap;
+align-items:center;
+justify-content:space-around;
+gap:4%;
+}
+
+.mywallet-main .wallet-trade-section>*{
+flex-basis:1 1 48%;
+}
+.mywallet-main .flex-container>*{
+flex-basis:48%;
+}
+
+
+}
+
+
+
+
+
+
+/* =====================
+Mini Large desktop
+=========================*/
+@media(min-width:850px){
+.display-grid-section .align-left.trade-chart{
+overflow:auto;
+}
+
+}
+
+
+
+
+
+
+/* ===========================
+Large Desktop screen
+===============================*/
+@media(min-width:980px){
+
+.mywallet-main .flex-container>*{
+flex-basis:22%;
+}
+.mywallet-main .flex-container figure + figure{
+border-left:1px solid #A7A7A7;
+}
+.mywallet-main .wallet-trade-section>*{
+flex-basis:1 1 24%;
+}
+.mywallet-main .wallet-trade-section figure{
+display:flex;
+flex-flow:row wrap;
+/* align-items:center; */
+}
+}

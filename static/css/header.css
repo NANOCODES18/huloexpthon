@@ -1,0 +1,368 @@
+
+/******************
+ styling  done according to the appearance of the selectors in each page
+*******************/
+.site-header{
+ padding:0.8rem 0;
+}
+.header-wrapper{
+ background:#F1F1F1 url("../images/World_map.png") no-repeat top;
+background-size:cover;
+/*z-index:1010;
+position:relative;
+*/padding-bottom:4rem;
+/*height:98vh;
+*/
+}
+
+
+.mobile-header-flex .img-container{
+width:50px;
+height:50px;
+}
+.mobile-header-flex .img-container img{
+width:100%;
+}
+.mobile-header-flex{
+display:flex;
+flex-flow:wrap;
+justify-content:space-between;
+}
+.mobile-header-flex .flex-left{
+display:flex;
+align-items:center;
+justify-content:center;
+/* flex-flow:row wrap; */
+gap:2%;
+}
+.mobile-header-flex .flex-right{
+ text-align:center;   
+}
+/* .mobile-header-flex > *{
+flex-basis:48%;
+} */
+
+.site-header-logo a{
+ font-size:1.2rem;
+ font-weight:700;
+ color:#0A13DF;
+ display:block;
+}
+
+
+
+/******************
+ mobile toggle label icon styles
+  *******************/
+.toggle-bars::after{
+    content:"\2630";
+    font-family:"FontAwesome";
+    font-size:var(--toggle-bar-size);
+    display:inline-block;
+    transition:0.5s;
+    width:45px;
+    cursor:pointer;
+    border:1px solid #ddd;
+    border-radius:6px;
+    box-shadow:0px 3px 2px rgba(0,0,0,0.5);
+    }
+    .toggle-bars:hover{
+    color:#0A13DF;
+    /* box-shadow:0px 3px 2px rgba(0,0,0,0.5); */
+    }
+    .nav-header-input:checked + .mobile-header-flex .toggle-bars::after{
+    content:"\f00d";
+    font-family:"FontAwesome";
+    font-size:var(--md-font);
+    font-weight:300;
+    display:inline-block;
+    color:#0A13DF;
+    } 
+
+
+  /******************
+  turn off the checkbok icon 
+  *******************/
+    .nav-header-input{
+    display:none;
+    }
+
+    
+   
+    /*navigation menu for mobile device */
+    .nav-main-menu{
+     height:0;
+     overflow:hidden;
+     transform-origin:center top;
+     transition:0.6s 40ms;
+     transform:scale(1,0);
+     background:#010216;
+    }
+    .nav-header-input:checked ~ .nav-main-menu{
+    height:100%;
+    overflow:visible;
+    transform:scale(1);
+    padding:1rem;
+     }
+
+     .nav-main-menu ul li a{
+     color:#fff;
+     font-weight:500;
+     display:block;
+     padding:0.3rem;
+     }
+
+     /* dropdown or  nested links styles */
+    .dropdown{
+     position: relative;
+    } 
+    
+    .dropdown-menu{
+     padding-left:1.2rem;
+     transition:0.6s;
+     transform-origin:center top;
+     transform:scale(1,0);
+     position:absolute;
+     top:100%;
+     width:100%;
+     z-index:1001;
+     background-color:#010216;
+    }
+     .dropdown:hover .dropdown-menu,
+     .dropdown:focus-within .dropdown-menu
+     {
+     transform:scale(1);
+     }
+     ul.dropdown-menu li a{
+    font-weight:300;
+    font-size:var(--sm-font);
+    transition:var(--normal-transition-duration);
+    }
+     ul.dropdown-menu li a:hover,ul.dropdown-menu li a:focus-within{
+     background:#383838;
+     color:hsl(255, 255, 255);
+     border-radius:5px;
+     padding-left:2rem;
+     }
+
+    /* nested items svg icons */
+    .nested-list-item .img-container{
+    display:none;
+    }
+
+
+/******************
+ header intro section
+*******************/
+ /******************
+  header-intro
+ *******************/
+  .header-intro{
+   padding:2rem;
+   line-height:1.5;
+   margin-top:2rem;
+   }
+  .header-intro .get-started-cta{
+   padding:0.6rem;
+   background:#0A13DF;
+   color:#fff;
+   width:120px;
+   border-radius:8px;
+   font-weight:400;
+   font-size:var(--md-font);
+   display:block;
+   text-align:center;
+   margin-top:1rem;
+   }
+   .header-intro p{
+   font-size:var(--md-font);
+   font-weight:400;
+   text-transform:capitalize;
+   font-size:var(--lg-font);
+   }
+   .header-intro p + p{
+   /* border:1px solid green; */
+   font-weight:500;
+   font-size:var(--md-font);
+   }
+   .header-intro strong.capslock{
+   text-transform:uppercase;
+   font-weight:700;
+   }
+
+   .header-intro .right .img-container{
+   width:100%;
+    }
+   .header-intro .right .img-container img{
+   width:100%;
+   }
+
+
+/******************
+tablet device
+*******************/
+@media(min-width:380px){
+/*check the suitable media for thr header tablet view  */
+/******************
+  header-intro
+*******************/
+.header-intro .flex{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-around;
+}
+.header-intro .flex >*{
+/*flex-basis:100%;
+*/
+flex:1 1 100%;
+}
+
+/*.header-intro.login .flex .left{
+flex:1 1 10%;
+}
+.header-intro.login .flex .right{
+border:1px solid red;
+flex-basis:55%;
+}*/
+}
+
+
+
+
+
+
+ /******************
+ medium size desktop device
+  *******************/
+  @media(min-width:650px){
+/******************
+    header intro
+*******************/
+ .header-intro{
+  padding-left:2rem;
+ }  
+ /*.header-intro .right .img-container{
+ margin-left:-140px;
+ }
+*/
+.header-intro .flex .left{
+flex:1 1 40%;
+}
+.header-intro .flex .right{
+flex:1 1 60%;
+}
+}
+
+
+
+
+
+  /******************
+  large screen desktop device
+  *******************/
+   @media(min-width:850px){
+    /* turn off mobile togglebar icons and styles */
+     .toggle-bars{
+     display:none;
+     }
+     .mobile-header-flex{
+     /* border:2px solid red; */
+     justify-content:center;
+     }
+     .nav-main-menu{
+     overflow:visible;
+     height:100%;
+     transform:scale(1);
+     background:transparent;
+     padding:1rem;
+     }
+     /* flex every children inside the  navbar */
+     .site-header{
+      display:flex;
+      gap:4%;
+      align-items:center;
+     }
+     .site-header .mobile-header-flex{
+     flex-basis:14%;
+     }
+     .site-header .nav-main-menu{
+     flex-basis:78%;
+     }
+
+     /* flex the list-items inside the ul element */
+     .nav-main-menu .nav-ul{
+     display:flex;
+     flex-flow:row wrap;
+     align-items:flex-end;
+     gap:2%;
+     }
+     .nav-main-menu .nav-ul li:first-child{
+      margin-right:auto;
+     }
+      .nav-main-menu .nav-ul li:nth-child(8){
+      margin-left:auto;
+     }
+
+     .nav-main-menu ul li a{
+      color:#A7A7A7;
+      font-weight:400;
+    }
+
+    /* register cta-btn */
+      .main-list-item .cta-btn{
+        border:2px outset #0A13DF;
+        padding:0.4rem 1rem;
+        background:#0A13DF;
+        color:#fff;
+        border-radius:6px;
+        font-weight:bold;
+        }
+
+        /*turnoff some dropdown menu styles*/
+        .nav-main-menu ul li a{
+        padding:0;
+        }
+        .dropdown-menu{
+         width:150px;
+         background-color:#F8F8F8;
+         padding:0.2rem;
+         border-radius:5px;
+         -o-box-shadow:1px 1px 0px rgba(0,0,0,0.1),-1px -1px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow:1px 1px 0px rgba(0,0,0,0.1),-1px -1px 0px rgba(0,0,0,0.1);
+        -webkit-box-shadow:1px 1px 0px rgba(0,0,0,0.1),-1px -1px 0px rgba(0,0,0,0.1);
+         box-shadow:1px 1px 0px rgba(0,0,0,0.1),-1px -1px 0px rgba(0,0,0,0.1);
+         color:#A7A7A7;
+        }
+        ul.dropdown-menu li:first-child{
+         border-bottom:1px solid #ddd;
+        }
+      
+        ul.dropdown-menu li a{
+        text-align:center;
+        padding:0.4rem 0 0.4rem 0;
+        font-weight:300;
+        font-size:70%;
+        }
+        ul.dropdown-menu li a:hover,ul.dropdown-menu li a:focus-within{
+        border-radius:0px;
+        background:transparent;
+        padding-left:0;
+        color:hsl(255, 255, 255);
+        }
+
+        /* styling the nested list svg icons */
+        .nested-list-item.flex{
+         display:flex;
+         align-items:center;
+         gap:2%;
+        }
+        .nested-list-item .img-container{
+        /* border:1px solid red; */
+        width:25px;
+        height:25px;
+        display:block;
+        }
+        .nested-list-item .img-container img{
+        width:100%;
+        }
+     }
