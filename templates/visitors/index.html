@@ -11,7 +11,7 @@
         <p>buy, sell , trade &amp; lend
         cryptocurrencies.
         </p>
-        <a class="get-started-cta" href="./signup.html" >Get Started</a>
+        <a class="get-started-cta" href="{% url  'account_signup' %}" >Get Started</a>
     </div>
     <div class="right">
     <div class="img-container">
@@ -311,14 +311,14 @@
   </tbody>
 </table>
 <div class="goto-market">
-  <a href="./market.html" style="text-align:center;font-size:0.822rem;text-transform:capitalize;display:block;color:#000;margin-top:1.4rem;border-bottom:1px solid #ddd;font-weight:600;padding-bottom:1.4rem">show all market</a>
+  <a href="{% url  'market' %}" style="text-align:center;font-size:0.822rem;text-transform:capitalize;display:block;color:#000;margin-top:1.4rem;border-bottom:1px solid #ddd;font-weight:600;padding-bottom:1.4rem">show all market</a>
 </div>
 </section>
 
 
 
 <section class="section-4">
-    <a class="getstarted-cta" href="./login.html">get started</a>
+    <a class="getstarted-cta" href="{% url  'account_login' %}">get started</a>
     <div class="chase-icon-container flex">
      <div class="chase-item">
         <div class="img-container">
@@ -495,7 +495,7 @@
         <p>Get 24/7 chat support with our friendly <br>
         customer services agents at your service
         </p>
-        <span class="learn-more"><a href="./login.html">chat now</a></span>
+        <span class="learn-more"><a href="{% url  'account_login' %}">chat now</a></span>
         <span></span>
     </div>
 </div>
@@ -508,7 +508,7 @@
         <p>View FAQs for detailed instruction on<br>
          specific features.
         </p>
-        <span class="learn-more"><a href="./login.html">learn more</a></span>
+        <span class="learn-more"><a href="{% url  'account_login' %}">learn more</a></span>
         <span></span>
     </div>
 </div>
@@ -521,7 +521,7 @@
         <p>steady update with the latest stories and <br>
         commentary
         </p>
-        <span class="learn-more"><a href="./login.html">learn more</a></span>
+        <span class="learn-more"><a href="{% url  'account_login' %}">learn more</a></span>
         <span></span>
     </div>
 </div>

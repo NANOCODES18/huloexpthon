@@ -27,9 +27,9 @@
     <div class="mobile-header-flex">
     <div class="flex-left">
         <div class="img-container">
-           <a href="./index.html"><img src="{% static 'images/huloex-logo-img.svg' %}" alt="logo image"/></a>
+           <a href="{% url 'homepage' %}"><img src="{% static 'images/huloex-logo-img.svg' %}" alt="logo image"/></a>
         </div>
-       <h1 class="site-header-logo"><a href="./index.html">HuloEx</a></h1>
+       <h1 class="site-header-logo"><a href="{% url 'homepage' %}">HuloEx</a></h1>
     </div>
       <div class="flex-right">
         <label for="toggle-action" class="toggle-bars"></label>
@@ -38,8 +38,8 @@
     <nav class="nav-main-menu">
         <ul>
            <ul class="nav-ul">
-                 <li class="main-list-item"><a href="./market.html">Market</a></li>
-                 <li class="main-list-item"><a href="./earn.html">Earn</a></li>
+                 <li class="main-list-item"><a href="{% url  'market' %}">Market</a></li>
+                 <li class="main-list-item"><a href="{% url  'earn' %}">Earn</a></li>
                  <li class="main-list-item dropdown"><a href="#"> Trades <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                     <!-- this is a second layer of navigation  -->
                     <ul class="dropdown-menu">
@@ -57,7 +57,7 @@
                         </li>
                     </ul>
                 </li>
-                 <li class="main-list-item"><a href="./buycrypto.html">Buy Crypto</a></li>
+                 <li class="main-list-item"><a href="{% url  'buycrypto' %}">Buy Crypto</a></li>
                  <li class="main-list-item dropdown"><a href="#"> Finance  <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                     <!--this is a second layer of navigation -->
                     <ul class="dropdown-menu">
@@ -76,8 +76,8 @@
                     </ul>
                 </li>
                  <li class="main-list-item"><a href="#">Language</a></li>
-                 <li class="main-list-item"><a href="./login.html">Log In</a></li>
-                 <li class="main-list-item"><a class="cta-btn" href="./signup.html">Register</a></li>
+                 <li class="main-list-item"><a href="{% url  'account_login' %}">Log In</a></li>
+                 <li class="main-list-item"><a class="cta-btn" href="{% url  'account_signup' %}">Register</a></li>
               </ul>
         </ul>
        </nav>

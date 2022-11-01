@@ -17,3 +17,6 @@ def debitcard(request):
 
 def earn(request):
     return render(request, 'visitors/earn.html')
+
+def market(request):
+    return render(request, 'visitors/market.html')

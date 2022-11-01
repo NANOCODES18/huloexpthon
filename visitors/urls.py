@@ -8,5 +8,7 @@ urlpatterns = [
     path("buycrypto", views.buycrypto, name="buycrypto"),
     path("cryptoloan", views.cryptoloan, name="cryptoloan"),
     path("debitcard", views.debitcard, name="debitcard"),
-    path("earn", views.earn, name="earn")
+    path("earn", views.earn, name="earn"),
+    path("market", views.market, name="market")
+    
 ]
