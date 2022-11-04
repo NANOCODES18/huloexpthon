@@ -65,7 +65,7 @@
                         <div class="img-container">
                             <img src="{% static 'images/debit-card-icon.svg ' %}" alt="contract icon"/>
                          </div>
-                        <a href="./debitcard.html">HuloEx Debit card</a>
+                        <a href="/debitcard">HuloEx Debit card</a>
                     </li>  
                       <li class="nested-list-item flex">
                         <div class="img-container">
@@ -76,9 +76,14 @@
                     </ul>
                 </li>
                  <li class="main-list-item"><a href="#">Language</a></li>
+                 {% if user.is_authenticated %}
+                 <li class="main-list-item"><a href=""></a></li>
+                 <li class="main-list-item"><a class="cta-btn" href="{% url  'account_logout' %}">Log out</a></li>
+                 {% else %}
                  <li class="main-list-item"><a href="{% url  'account_login' %}">Log In</a></li>
                  <li class="main-list-item"><a class="cta-btn" href="{% url  'account_signup' %}">Register</a></li>
-              </ul>
+                 {% endif %}
+                </ul>
         </ul>
        </nav>
     </header>

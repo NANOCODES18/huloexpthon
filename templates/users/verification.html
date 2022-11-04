@@ -1,0 +1,375 @@
+{% extends 'basefiles/users_base.html' %}{% load static %}
+
+{% block active_nav %}
+<section class="sidebar">
+    <div class="middle">
+       <ul class="sidebar-middle">
+        <li class="sidebar-row">
+            <a href="/user/">
+             <div class="img-container">
+             <img src="{% static 'images/dashboard-icon3.svg' %}" alt="dashboard icon"> 
+             </div> 
+             <h3>dashboard</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/trade-icon.svg' %}" alt="trade icon"> 
+             </div> 
+             <h3>trade</h3> 
+            </a>
+            <ul class="dropdown-ul">
+            <li class="sidebar-row">
+            <a href="/user/spottrading">
+             <h3>spot trading</h3> 
+            </a>
+           </li>
+           <li class="sidebar-row">
+            <a href="/user/contractTrading">
+             <h3>contract trading</h3> 
+            </a>
+          </li>
+      </ul>
+     </li>
+     <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/exchange-icon.svg' %}" alt="exchange icon"> 
+             </div> 
+             <h3>exchange</h3> 
+            </a>
+        </li>
+       <li class="sidebar-row">
+            <a href="/user/mywallet">
+             <div class="img-container">
+             <img src="{% static 'images/wallet-icon.svg' %}" alt="wallet icon"> 
+             </div> 
+             <h3>my wallet</h3> 
+            </a>
+        </li>
+
+    </ul> 
+    </div>
+
+    <div class="bottom">
+      <ul class="sidebar-bottom">
+        <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/get-help-icon.svg' %}" alt="get help icon"> 
+             </div> 
+             <h3>get help</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/setting-icon2.svg' %}" alt="setting icon"> 
+             </div> 
+             <h3>settings</h3> 
+            </a>
+            <ul class="dropdown-ul">
+             <li class="sidebar-row">
+            <a href="/user/general">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>general</h3> 
+            </a>
+         </li>
+         <li class="sidebar-row">
+            <a href="/user/security">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div> --> 
+             <h3>security</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row">
+            <a class="active-dashboard" href="/user/verification">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>verification</h3> 
+            </a>
+        </li>
+
+       </ul>
+     </li>
+   </ul>
+ </div>
+</section>         
+{% endblock active_nav %}
+{% block content %}
+    <main class="general-main verification-main">
+    <section class="close">
+
+      </section>
+        
+
+        <section class="settings-grid security-grid">
+            <div class="right-grid">
+                <h2>Verification</h2>
+
+                <a id="individual-verify" href="#" class="profile-wrapper">
+                    <div class="img-container">
+                        <img src="{% static 'images/verified-user-icon.svg' %} " alt="verified user icon">
+                    </div>
+                     <div>
+                        <h4 id="individual-verify">Individual Verification</h4>
+                        <p>Basic KYc Verification</p>
+                     </div>
+                </a>
+                <a id="institutional-verify" href="#" class="profile-wrapper">
+                    <div class="img-container">
+                        <img src="{% static 'images/bank-verification-icon.svg' %} " alt="verified user icon">
+                    </div>
+                     <div>
+                        <h4 id="institutional-verify">Institutional Verification</h4>
+                        <p>access more features</p>
+                     </div>
+                </a>
+    
+            </div>
+    
+            <div class="left-grid">
+
+                <!-- ========================INDIVIDUAL VERIFICATION SECTION ======================-->
+                <section class="verification-section active-verification" id="individual-verify">
+                <h3>Individual Verification</h3>
+                <p>
+                 Please be advised HuloEX may not make the services available in all markets and jurisdiction
+                 and may restrict or prohibit use of the services from certain jurisdiction. 
+
+                </p>
+                <p>
+                We currently only accept customers from the jurisdictions or countries listed below in 
+                order to comply with all applicable laws and regulations. Please select your country correctly.
+                </p>
+                <div class="form-container">
+                    <form action="/user/verification" enctype="multipart/form-data" method="POST">
+                        {% csrf_token %}
+                        <div class="double form-row">
+                            <div class="form-field">
+                                <label for="firstname"> first name</label>
+                                <input type="text" id="firstname" required name="first_name" placeholder="First Name">
+                            </div>
+                            <div class="form-field">
+                                <label for="lastname"> last name</label>
+                                <input type="text" id="lastname" required name="last_name" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="double form-row">
+                            <div class="form-field">
+                                <label for="country"> country</label>
+                                <div class="select-field">
+                                    <select id="country" name="country" required>
+                                        <option selected>Nigeria</option>
+                                        <option>Ghana</option>
+                                        <option>Togo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="phone"> phone number</label>
+                                <input type="number" id="phone" name="phone_number" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="tripple form-row">
+                            <div class="form-field">
+                               <label for="day"> day of birth</label>
+                                <div class="select-field">
+                                    <select id="day" name="day">
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="month"> month of birth</label>
+                                 <div class="select-field">
+                                     <select id="month" name="month">
+                                  <option value="january" selected>january</option>
+                                  <option value="febuary">febuary</option>
+                                  <option value="march">march</option>
+                                  <option value="april">april</option>
+                                  <option value="may">may</option>
+                                  <option value="june">june</option>
+                                  <option value="july">july</option>
+                                  <option value="august">august</option>
+                                  <option value="september">september</option>
+                                  <option value="october">october</option>
+                                  <option value="november">november</option>
+                                  <option value="december">december</option>
+                                     </select>
+                                 </div>
+                             </div>
+                             <div class="form-field">
+                               <label for="year"> year of birth</label>
+                                <div class="select-field">
+                                    <select id="year" name="year">
+                                        <option value="1999" selected>1999</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="document-section">
+                          <p>Document</p>
+                        </div>
+                        
+                        <div class="single form-row">
+                        <div class="single form-field">
+                            <label for="doc"> choose the document to upload</label>
+                             <div class="select-field">
+                                 <select id="doc" required name="document_uploaded">
+                            
+                                     <option selected>pdf</option>
+                                     <option>jpg</option>
+                                     <option>png</option>
+                                 </select>
+                             </div>
+                         </div>
+                        </div>
+                          
+                         <div class="double form-row">
+                         
+                         <div class="form-field">
+                            <label for="serial_number">Serial Number</label>
+                            <input type="number" id="serial_number" required name="serial_number">
+                        </div>
+                         <div class="form-field">
+                            <label for="year-issued"> year issued</label>
+                             <div class="select-field">
+                                 <select id="year-issued" required name="year_issued">
+                                    <option selected>2017</option>
+                                     <option>2018</option>
+                                     <option>2019</option>
+                                     <option>2020</option>
+                                     <option>2021</option>
+                                     <option>2022</option>
+                                 </select>
+                             </div>
+                         </div>
+                        </div>
+
+                        <div class="single form-row">
+                            <div class="form-field">
+                               <label for="doc-upload"> upload doccument</label>
+                                <input type="file" id="doc-upload" required name="upload_document"/>
+                                </div>
+                        </div>
+
+                        <div class="btn-row">
+                         <button type="submit">Verify</button>
+                        </div>
+                    </form>
+                    </div>
+                </section>
+
+                <!-- ======================INSTITUTIONAL VERIFICATION======================= -->
+            <section class="verification-section institutional" id="institutional-verify">
+               <h3>Institutional Verification</h3>
+                <div class="flex-container">
+                  <div class="flex-item">
+                    <div class="delete-icon">
+                    <span class="fa fa-times"></span>
+                    </div>
+                    <div class="user-icon">
+                        <span class="fa fa-user"></span>
+                    </div>
+                    <div class="text-content">
+                        <p><strong>Finish KYC Procedure</strong></p>
+                        <p class="unverified">Unverified</p>
+                    </div>
+                    </div>
+
+                    <div class="flex-item">
+                    <div class="delete-icon">
+                    <span class="fa fa-times"></span>
+                    </div>
+                    <div class="user-country-icon">
+                    <span class="fa fa-image"></span>
+                    </div>
+                    <div class="text-content">
+                        <p>Proceed to KYC procedure first to know if your <br>
+                        country is compatible with institutional services</p>
+                    </div>
+                    </div>
+
+                    <div class="flex-item">
+                    <div class="delete-icon">
+                    <span class="fa fa-times"></span>
+                    </div>
+                    <div class="user-country-icon">
+                        <span class="fa fa-image"></span>
+                    </div>
+                    <div class="text-content">
+                        <p>25,000&dollar; Account Equality</p>
+                        <small>Missing another 25,000 &dollar;</small>
+                    </div>
+                    </div>
+                </div>
+                 <div class="btn-row">
+                    <button type="submit">Verify</button>
+                    </div>
+            </section>
+            </div>
+         </main>
+    <!-- ==============END OF MAIN============== -->
+
+ </div>
+ <!-- =============END OF GRID CONTAINER -->
+  
+     
+
+</div>
+
+    
+
+
+
+{% endblock content %}

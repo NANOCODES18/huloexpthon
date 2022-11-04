@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/huloex-logo.png" type="image/icon"/>
+    <link href="./font-awesome/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <title>sign up</title>
+</head>
+<body>
+    <!-- NoteBefore: the term "cta" was used in most styling to denote call to action btn -->
+    <!-- starting with mobile first principle -->
+   <div class="site-wrapper">
+    <div class="signup header-wrapper">
+    <header class="site-header index-header">
+    <input type="checkbox" id="toggle-action" class="nav-header-input"/>
+    <div class="mobile-header-flex">
+    <div class="flex-left">
+        <div class="img-container">
+            <a href="./index.html"><img src="./images/huloex-logo-img.svg" alt="logo image"/></a>
+        </div>
+        <h1 class="site-header-logo"><a href="./index.html">HuloEx</a></h1>
+    </div>
+      <div class="flex-right">
+        <label for="toggle-action" class="toggle-bars"></label>
+       </div>
+    </div>
+    <nav class="nav-main-menu">
+        <ul>
+           <ul class="nav-ul">
+                 <li class="main-list-item"><a href="./market.html">Market</a></li>
+                 <li class="main-list-item"><a href="./earn.html">Earn</a></li>
+                 <li class="main-list-item dropdown"><a href="#"> Trades <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    <!-- this is a second layer of navigation  -->
+                    <ul class="dropdown-menu">
+                        <li class="nested-list-item flex">
+                            <div class="img-container">
+                             <img src="./images/spot-trading.svg " alt="spot trading icon"/>
+                            </div>
+                            <a href="./signup.html">Spot Trading</a>
+                        </li>
+                        <li class="nested-list-item flex">
+                             <div class="img-container">
+                                <img src="./images/debit-card-icon.svg" alt="contract icon"/>
+                             </div>
+                            <a href="./signup.html">Contract Trading</a>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="main-list-item"><a href="./buycrypto.html">Buy Crypto</a></li>
+                 <li class="main-list-item dropdown"><a href="#"> Finance  <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    <!--this is a second layer of navigation -->
+                    <ul class="dropdown-menu">
+                      <li class="nested-list-item flex">
+                        <div class="img-container">
+                            <img src="./images/debit-card-icon.svg" alt="contract icon"/>
+                         </div>
+                        <a href="./debitcard.html">HuloEx Debit card</a>
+                    </li>  
+                      <li class="nested-list-item flex">
+                        <div class="img-container">
+                            <img src="./images/debit-card-icon.svg" alt="contract icon"/>
+                         </div>
+                        <a href="./cryptoloan.html">HuloEx Crypto Loan</a>
+                    </li>  
+                    </ul>
+                </li>
+                 <li class="main-list-item"><a href="#">Language</a></li>
+                 <li class="main-list-item"><a href="./login.html">Log In</a></li>
+                 <li class="main-list-item"><a class="cta-btn" href="./signup.html">Register</a></li>
+              </ul>
+        </ul>
+       </nav>
+    </header>
+        <!--
+    /******************
+    header-intro
+  *******************
+  /-->
+ <section class="header-intro image-banner">
+  <div class="banner-wrapper signup-auth">
+    <div class="img-container">
+        <img src="./images/two-right-phones.png" alt="banner image">
+    </div>
+  </div>
+ </section>
+
+  </div>
+
+    <!-- site main body -->
+    <main class="site-body signup-main signup-panel-auth panel">
+     
+    <!-- 
+        *********************
+        main login page
+        *********************
+    -->
+    <div>
+        <div class="panel-header flex">
+            <a class="cta" href="./login.html">sign in</a>
+            <a class="cta" href="./signup.html">sign up</a>
+        </div>
+        <div>
+            <form class="form-field">
+             <div class="signup-form-body">
+                <div class="field-container">
+                <label for="name">
+                <input type="text" 
+                class="name-input input"
+                id="name"
+                placeholder="Name" 
+                >
+                </label>
+               </div>
+                <div class="field-container">
+                <label for="phone_number">
+                <input type="number" 
+                class="number-input input"
+                id="number"
+                placeholder="Phone Number" 
+                >
+                </label>
+                </div>
+                <div class="field-container">
+                <label for="email">
+                <input type="email" 
+                class="email-input input"
+                id="email"
+                placeholder="E-Mail" 
+                >
+                </label>
+                </div>
+                <div class="field-container">
+                <label for="country">
+                <input type="text" 
+                class="country-input input"
+                id="country"
+                placeholder="Country" 
+                >
+                </label>
+                </div>
+                <div class="field-container">
+                <label for="password"> 
+                <input type="password" 
+                class="email-input input"
+                id="password"
+                placeholder="Password" 
+                >
+                </label>
+                </div>
+                <div class="field-container">
+                <label for="confirmPassword">
+                <input type="password" 
+                class="email-input input"
+                id="confirmPassword"
+                placeholder="Confirm Password" 
+                >
+                </label>
+               </div>
+             </div>
+             <div class="signup-referral-section">
+             <p>Referral Code</p>
+             <div class="code-section">
+                 <input type="text">
+                 <input type="text">
+                 <input type="text">
+                 <input type="text">
+                 <input type="text">
+                 <input type="text">
+             </div>
+             </div>
+             <div class="captcha-text">
+                <p>CAPTCHA</p>
+             </div>
+             <div class="signup-form-footer">
+             <a href="./signin.html">Sign In</a>
+             <a href="./dashboard.html" class="signup-footer-cta">Sign Up</a>
+             </div>
+             <!-- <a class="create-text-action" href="#"> Create An Account </a> -->
+         </form>
+        </div>
+    </div>
+     
+    </main>
+    
+
+
+
+<!-- index page division line -->
+   <div class="division-line"></div>
+    <!-- footer markup -->
+    <footer class="site-footer index-footer">
+         <!--The nav element was used in the footer because it includes all the links on the site
+            and could be the major navigation-->
+            <nav>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a>
+                        <!-- No closing </li> for dropdown menu  here -->
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="business-contact.html">Business Contacts</a></li>
+                            <li><a href="community.html">Community</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html">Products</a>
+                        <!-- No closing </li> for dropdown menu  here -->
+                        <ul>
+                            <li><a href="#">Exchange</a></li>
+                            <li><a href="#">Academy</a></li>
+                            <li><a href="#">Charity</a></li>
+                            <li><a href="#">Card</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="service.html">Service</a>
+                        <!-- No closing </li> for dropdown menu  here -->
+                        <ul>
+                            <li><a href="#">Downloads</a></li>
+                            <li><a href="#">Desktop Applicaton</a></li>
+                            <li><a href="#">Buy Crypto</a></li>
+                            <li><a href="#">Institutional and VIP Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="support.html">Support</a>
+                        <!-- No closing </li> for dropdown menu  here -->
+                        <ul>
+                            <li><a href="#">Give Us Feedback</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Submit a request</a></li>
+                            <li><a href="#">APIs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="learn.html">Learn</a>
+                        <!-- No closing </li> for dropdown menu  here -->
+                        <ul>
+                            <li><a href="#">Learn and Earn</a></li>
+                            <li><a href="#">Browse Crypto Prices</a></li>
+                            <li><a href="#">Buy BNB</a></li>
+                            <li><a href="#">Buy BUSD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="community.html">Community</a>
+                        <!-- No closing </li> for dropdown menu  here -->
+                        <ul class="social-icons">
+                            <!-- social icons first row -->
+                            <div>
+                            <li><a href="#"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="15" height="15" fill="#A7A7A7"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/></svg></span></a></li>
+                            <li><a href="#"><span class="fa fa-telegram"></span></a></li>
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            </div>
+                            <!-- Social icons second row -->
+                            <div>
+                            <li><a href="#"><span class="fa fa-reddit"></span></a></li>
+                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                            <li><a href="#"><span><svg viewBox="0 0 76.52 77.67" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m66.54 46.41a4.09 4.09 0 0 1 -4.17.28c-1.54-.87-2.37-2.91-2.37-5.69v-8.52c0-4.09-1.62-7-4.33-7.79-4.58-1.34-8 4.27-9.32 6.38l-8.1 13.11v-16c-.09-3.69-1.29-5.9-3.56-6.56-1.5-.44-3.75-.26-5.94 3.08l-18.11 29.07a32 32 0 0 1 -3.64-14.94c0-17.52 14-31.77 31.25-31.77s31.3 14.25 31.3 31.77v.09s0 .06 0 .09c.17 3.39-.93 6.09-3 7.4zm10-7.57v-.17c-.14-21.35-17.26-38.67-38.29-38.67s-38.25 17.42-38.25 38.83 17.16 38.84 38.25 38.84a37.81 37.81 0 0 0 26-10.36 3.56 3.56 0 0 0 .18-5 3.43 3.43 0 0 0 -4.86-.23 30.93 30.93 0 0 1 -44.57-2.08l16.3-26.2v12.09c0 5.81 2.25 7.69 4.14 8.24s4.78.17 7.81-4.75l9-14.57c.28-.47.55-.87.79-1.22v7.41c0 5.43 2.18 9.77 6 11.91a11 11 0 0 0 11.21-.45c4.2-2.73 6.49-7.67 6.25-13.62z" fill="#A7A7A7"/></svg></span></a></li>
+                            <li><a href="#"><span><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="-3.6 -6 31.2 36"><path fill-rule="evenodd" fill="#A7A7A7" d="M15.68 0C22.4 0 24 1.6 24 8.32v7.36C24 22.4 22.4 24 15.68 24H8.32C1.6 24 0 22.4 0 15.68V8.32C0 1.6 1.6 0 8.32 0zM6.5 7.5H4.75c-.5 0-.6.24-.6.49 0 .47.59 2.77 2.76 5.81a6.85 6.85 0 005.34 3.2c1.11 0 1.25-.25 1.25-.68v-1.57c0-.5.11-.6.46-.6.35 0 .7.13 1.74 1.13 1.19 1.19 1.38 1.72 2.05 1.72h1.75c.5 0 .75-.25.61-.74a7.43 7.43 0 00-1.48-2.05c-.41-.49-1-1-1.21-1.26-.21-.26-.18-.49 0-.78a21.83 21.83 0 002.36-4c.11-.37 0-.64-.53-.64H17.5a.77.77 0 00-.76.49 14.67 14.67 0 01-2.15 3.58c-.41.41-.6.54-.82.54-.22 0-.27-.13-.27-.5v-3.5c0-.44-.13-.64-.5-.64h-2.75a.43.43 0 00-.45.4c0 .42.64.52.7 1.71v2.57c0 .57-.1.67-.32.67-.6 0-2-2.18-2.9-4.67C7.12 7.7 7 7.5 6.5 7.5z"/></svg></span></a></li>
+                            </div>
+                            <!-- social icons third row -->
+                            <div>
+                            <li><a href="#"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="15" height="15" fill="#A7A7A7"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span></a></li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    </footer>
+   </div> 
+</body>
+</html>
