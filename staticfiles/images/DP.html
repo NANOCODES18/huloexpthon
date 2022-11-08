@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/images/huloex-logo.png" type="image/icon">
+    <link href="./DP_files/font-awesome.min.css" rel="stylesheet">
+    <link href="./DP_files/index.css" rel="stylesheet">
+    <title>DP</title>
+</head>
+<body>
+
+<header class="header-wrapper index-page">
+	<div class="site-header">
+
+		<div class="navigation-container main-nav">
+			<nav>
+				<ul class="nav-menu">
+					<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/index.html">Create Flyer</a></li>
+					<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/trending.html">Trending</a></li>
+					<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/categories.html">Categories</a></li>
+					<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/createdp.html">Create DP flyer</a></li>
+					<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/signup.html">Sign Up</a></li>
+                    <li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/login.html">Login</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="signup-panel">
+			<div class="signup-wrapper">
+				<h2 class="form-caption">sign up</h2>
+				<form>
+					<div class="double-input">
+					  <div class="row-container">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name">
+					   </div>
+					   <div class="row-container">
+					   	<label for="surname">surname</label>
+					   	<input type="text" name="surname" id="surname">
+					   </div>
+					</div>
+					<div class="single-input">
+						<div class="row-container">
+							<label for="email">e-mail</label>
+							<input type="email" name="email" id="email">
+						</div>
+					</div>
+					<div class="double-input">
+					  <div class="row-container">
+						<label for="password">password</label>
+						<input type="password" name="password" id="password">
+					   </div>
+					   <div class="row-container">
+					   	<label for="confirmPassword">confirm password</label>
+					   	<input type="confirmPassword" name="confirmPassword" id="confirmPassword">
+					   </div>
+					</div>
+				</form>
+			</div>
+		</div>
+		</div>
+		
+	
+</header>
+
+<main>
+	<section class="section-wrapper">
+		<style>
+			table{
+			width:100%;
+			border-collapse:collapse;
+		   -webkit-box-sizing:border-box;
+            box-sizing:border-box
+			}
+			img{
+			width:100%;
+			height:100%;
+			vertical-align:top;
+			}
+			td,th{
+			text-transform:capitalize;
+			font-weight:500;
+			font-size:0.9rem;
+			text-align:left;
+			padding:20px 24px;
+			border-bottom:1px solid #e8eaf0;
+			vertical-align:middle;
+			}
+			th{
+			font-size:0.8rem;
+			font-weight:300;
+			}
+			.currency-symbol{
+			display:flex;
+			gap:4%;
+			position:relative;
+			align-items:center;
+			}
+			.first-symbol{
+			 height:40px;
+			 width:40px;
+			 border-radius:50%;
+			 border:0px solid #fff;
+			 position:relative;
+			 overflow:hidden;
+			 /*flex-shrink:0;*/
+			}
+			.second-symbol{
+			height:20px;
+			width:20px;
+			position:absolute;
+			border:2px solid #fff;
+			overflow:hidden;
+			border-radius:50%;
+			left:18px;
+			bottom:-2px;
+			z-index:1001;
+			/*flex-shrink:0;*/
+			}
+			.table-static-text-green{
+			color:#01aa78;
+			}
+			.table-static-text-red{
+			color:#e25050;
+			}
+			.updated-table-data{
+			display:inline-block;
+            margin-right:8px;
+            padding:4px;
+            color:#0a0f38;
+            font-size:0.882rem;
+            font-weight:500;
+            line-height:1.12;
+			}
+			.table-dynamic-text-red{
+             color:#e25050;
+             background-color:rgba(226,80,80,.1)
+             }
+             .table-dynamic-text-green{
+             color:#01aa78;
+             background-color:rgba(1,170,120,.1)
+             }
+		</style>
+		<table>
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>last price</th>
+					<th>change 24H</th>
+					<th>volume 24H</th>
+					<th>low 24H</th>
+					<th>high 24H</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="trade-data-row">
+					<td class="table-data">
+						<div class="cryptocurrency-pairs currency-symbol">
+							<div class="image-continer first-symbol">
+								<img src="./DP_files/BTC.png">
+							</div>
+							<div class="image-continer second-symbol">
+								<img src="./DP_files/USDT.png">
+							</div>
+							<span class="currency-symbol">BTC / USD</span>
+						</div>
+					</td>
+					<td class="table-data">
+						<div class="updated-table-data table-dynamic-text-green">
+						 <span class="table-dynamic-text">25,502.17</span>
+						</div>
+						<span class="table-static-text">$25,489.29</span>
+					</td>
+					<td class="table-data">
+						<span class="table-static-text table-static-text-green">+4.18%</span>
+					</td>
+					<td class="table-data">
+						<span class="table-static-text">$29,949,275.69</span>
+					</td>
+					<td class="table-data">
+						<span class="table-static-text">25,281.37</span>
+					</td>
+					<td class="table-data">
+						<span class="table-static-text">26,471.55</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+</main>
+
+
+<footer class="footer-wrapper index-page">
+	<div class="footer-nav-container">
+		<nav>
+			<ul class="flex-center footer-flex">
+				<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/template.html#">site map</a></li>
+				<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/template.html#">site map</a></li>
+				<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/template.html#">site map</a></li>
+				<li><a href="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/template.html#">site map</a></li>
+			</ul>
+		</nav>
+	</div>
+</footer>
+<script src="file:///C:/Users/JOBOSON%20SOLOMON/Desktop/react-projects/nanocodes-project/display-picture/index.js"></script>
+
+
+</body></html>

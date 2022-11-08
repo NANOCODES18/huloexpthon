@@ -1,0 +1,202 @@
+/******************
+    crypto loan styles
+  *******************/
+ /*cryptoloan.header-wrapper{
+ padding-bottom:0;
+ }
+
+*/.header-intro.cryptoloan-section h2{
+ font-weight:700;
+ font-size:var(--lg-font);
+}
+.header-intro.cryptoloan-section p{
+font-weight:400;
+font-size:0.7rem;
+}
+.header-intro.cryptoloan-section .flex{
+align-items:center;
+padding:0rem;
+}
+.header-intro.cryptoloan-section .flex >*{
+flex:1 1 100%;
+}
+
+.cryptoloan-main.cryptoloan-panel{
+width:80%;
+margin-top:-100px;
+text-align:left;
+padding:1rem;
+
+}
+.cryptoloan-panel .flex-container form >*{
+padding:1rem;
+}
+.cryptoloan-panel .flex-container form > :last-child{
+background:#EEEEEE;
+border-radius:5px;
+}
+.cryptoloan-panel .flex-container label{
+display:block;
+font-weight:600;
+font-size:0.8rem;
+}
+.cryptoloan-panel .flex-container select{
+margin-bottom:1rem;
+width:100%;
+padding:0.8rem;
+border-radius:4px;
+text-indent:0.4rem;
+-webkit-text-indent:0.4rem;
+outline:none;
+border:none;
+background:#EEEEEE;
+text-align:left;
+-webkit-text-align:left;
+-moz-text-align:left;
+color:#A7A7A7;
+transition:background 0.6s;
+-webkit-padding:0.8rem;
+-moz-padding:0.8rem;
+-webkit-appearance:none;
+}
+.cryptoloan-panel .flex-container .select-field{
+position:relative;
+}
+.cryptoloan-panel .flex-container .select-field:after{
+position:absolute;
+content:">";
+transform:rotate(90deg);
+font-size:18px;
+color:#A7A7A7;
+top:8px;
+right:10px;
+display:inline-block;
+}
+.cryptoloan-panel .flex-container select:hover{
+background:transparent;
+border:1px solid #eee;
+}
+.cryptoloan-panel .flex-container textarea{
+border-radius:6px;
+text-align:center;
+padding-top:1rem;
+width:100%;
+outline:none;
+border:1px solid #eee;
+color:#A7A7A7;
+}
+
+/******************
+  Float right styles
+******************/
+./*cryptoloan-panel .float-right{
+
+}*/
+.cryptoloan-panel .float-right h3{
+ font-size:0.9rem;
+ font-weight:700;
+ color:#000;
+}
+.cryptoloan-panel .float-right h3 + p{
+color:lightgreen;
+font-size:var(--lg-font);
+font-weight:500;
+}
+.cryptoloan-panel .float-right .row{
+display:flex;
+gap:4%;
+font-size:0.6rem;
+padding:2rem 0;
+}
+.cryptoloan-panel .float-right .flex-container{
+font-weight:600;
+color:#000;
+margin-bottom:2rem;
+}
+.cryptoloan-panel .float-right .flex-container >*{
+margin-bottom:1rem;
+}
+.cryptoloan-panel .float-right .cta-btn{
+border:none;
+outline:none;
+padding:0.6rem;
+background:#0A13DF;
+color:#fff;
+width:120px;
+border-radius:6px;
+cursor:pointer;
+display:inline-block;
+font-weight:600;
+margin-left:25%;
+transform:translateY(0);
+transition:background,transform 0.5s;
+}
+.cryptoloan-panel .float-right .cta-btn:hover{
+background:darkblue;
+transform:translateY(20%);
+}
+.roadmap-section{
+margin-top:2.4rem;
+}
+
+
+  /******************
+    Tablet device
+  *******************/
+@media(min-width:380px){
+.cryptoloan-section .right img{
+margin-bottom:-50px;
+}
+}
+
+
+
+
+
+
+  /******************
+    Desktop device
+  *******************/
+ @media(min-width:650px){
+ .cryptoloan-main.cryptoloan-panel{
+ margin-top:-170px;
+ border:0px solid red;
+ margin-left: calc(10% - 5%);
+ }
+
+.header-intro.cryptoloan-section .flex .left{
+ flex:1 1 40%;
+}
+.header-intro.cryptoloan-section .flex .right{
+ flex:1 1 64%;
+}
+.cryptoloan-panel .flex-container form{
+display:flex;
+flex-flow:row wrap;
+justify-content:center;
+}
+.cryptoloan-panel .flex-container form >*{
+flex:1 1 50%;
+}
+.cryptoloan-panel .flex-container form > :first-child{
+border-top:2px solid #EEEEEE;
+}
+.cryptoloan-section .right img{
+margin-bottom:-120px;
+}
+}
+
+ /******************
+    Large Desktop device
+  *******************/
+  @media(min-width:810px){
+.cryptoloan-panel .float-right .flex-container{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-between;
+gap:4%;
+}
+.cryptoloan-panel .float-right .flex-container>*{
+flex-basis:48%;
+}
+}

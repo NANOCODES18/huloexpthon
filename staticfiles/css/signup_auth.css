@@ -1,0 +1,138 @@
+.form-field a,p{
+ font-size:80%;
+ }
+
+   /********************
+   .signup-form-body 
+   .field-container
+
+   ********************/
+.signup-form-body{
+ padding:1rem;
+ }
+   .signup-form-body label{
+    font-size:var(--sm-font);
+    margin-bottom:1rem;
+    display:block;
+    font-weight:600;
+    }
+    .signup-form-body .input{
+    padding:0.8rem;
+    outline:none;
+    border-radius:4px;
+    box-shadow:none;
+    border:1px solid #ccc;
+    background:#fff;
+    display:block; 
+    width:100%;
+    text-indent:0.6rem;
+    }
+    .signup-referral-section{
+    display:flex;
+    flex-flow:column wrap;
+    justify-content:space-around;
+    align-items:center;
+    margin:1rem 0 0 0;
+    margin:0 0 1rem 0;
+    }
+    .signup-referral-section p{
+    font-size:0.8rem;  
+    }
+    .signup-referral-section input{
+    height:30px;
+    background:#fff;
+    display:inline-block;
+    width:30px;
+    border-radius:7px;
+    text-align:center;
+    border:1px solid #383838;
+    outline:1px solid #ddd;
+    }
+    .captcha-text{
+    text-align:center;
+    }
+    .captcha-text p{
+    font-weight:600;
+    font-size:1.2rem;
+    margin-top:2rem;
+    }
+    .signup-form-footer{
+    text-align:center;
+    padding:1.4rem;
+    /*display:block;*/
+    }
+    .signup-form-footer a{
+    font-size:var(--md-font);
+    font-weight:600;
+    }
+    .signup-form-footer a:first-child{
+    display:none;
+    }
+.signup-footer-cta{
+background:#0A13DF;
+color:#fff;
+width:120px;
+display:block;
+font-size:var(--sm-font);
+font-weight:600;
+padding:0.6rem;
+border-radius:15px;
+margin:1rem auto 0 auto;
+cursor:pointer;
+border:none;
+}
+a.create-text-action{
+    display:block;
+    font-size:68%;
+    text-align:center;
+    padding:1rem 0 2rem 0;
+}
+    
+    
+    
+ @media(min-width:380px){
+  .signup-referral-section{
+    gap:1rem;
+    }
+    .signup-breadcrumb{
+    text-align:center;
+    }
+ .banner-wrapper.signup-auth .img-container{
+  width:80%;
+ }
+}
+    
+    /* Desktop device*/
+   @media(min-width:650px){
+    .signup-panel-auth.panel{
+    width:60%;
+    }
+    .signup-form-body{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    gap:4%;
+    margin:0 1rem 2rem 2rem;
+    }
+    .signup-form-body .field-container{
+    flex:48%;
+    margin:0;
+    }
+    .signup-form-footer{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:40%;
+    }
+
+    .signup-referral-section{
+    gap:4%;
+    flex-flow:row wrap;
+    }
+    .signup-form-footer a:first-child{
+    display:block;
+    }
+    /*.signup-panel{
+    width:50%;
+    }*/
+    }

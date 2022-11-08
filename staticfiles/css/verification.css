@@ -1,0 +1,132 @@
+/* ======================
+Verification Styles
+========================*/
+/* .general-main.verification-main{
+
+} */
+
+/* ====================INDIVIDUAL VERIFICATION======================= */
+.general-main.verification-main .right-grid .profile-wrapper{
+/* justify-content:flex-end; */
+}
+.general-main.verification-main .right-grid h4{
+font-size:0.872rem;
+}
+.general-main.verification-main .left-grid .verification-section .form-container{
+margin-top:2rem;
+}
+.general-main.verification-main .left-grid .verification-section label{
+display:block;
+font-size:0.87rem;
+font-weight:500;
+text-transform:capitalize;
+}
+.general-main.verification-main .left-grid .verification-section input,
+.general-main.verification-main .left-grid .verification-section select
+{
+width:100%;
+padding:0.8rem;
+margin-bottom:1rem;
+background:#D9D9D9;
+border:none;
+}
+.general-main.verification-main .left-grid .verification-section .document-section p{
+position:relative;
+font-weight:600;
+font-size:1rem;
+margin:1rem 0rem;
+
+}
+.general-main.verification-main .left-grid .verification-section .document-section p::after{
+content:"";
+width:80%;
+border-bottom:2px solid #E5E5E5;
+display:inline-block;
+vertical-align:middle;
+margin-left:0.5rem;
+}
+.general-main.verification-main .left-grid .verification-section .btn-row{
+text-align:right;
+}
+.general-main.verification-main .left-grid .verification-section button{
+background: #3810FF;
+border-radius:4px;
+padding:0.8rem;
+color:#FFFFFF;
+display:block;
+width:100px;
+text-align:center;
+cursor: pointer;
+margin-left:auto;
+font-weight:600;
+}
+
+.verification-section{
+display:none;
+}
+.active-verification{
+display:block;
+}
+
+/* =====================INSTITUTIONAL VERIFICATION============================ */
+/* .general-main.verification-main .left-grid .verification-section.institutional .flex-container{
+border:1px solid red;
+
+} */
+.general-main.verification-main .left-grid .verification-section.institutional .flex-item{
+margin-bottom:1.2rem;
+}
+.general-main.verification-main .left-grid .verification-section.institutional .flex-item .fa{
+background:#D9D9D9;
+border-radius:50%;
+font-size:1.4rem;
+display:block;
+height:45px;
+width:45px;
+line-height:40px;
+text-align:center;
+}
+.general-main.verification-main .left-grid .verification-section.institutional .flex-item .fa.fa-times{
+color:red;
+font-weight:300 !important;
+font-size:0.8rem;
+height:20px;
+width:20px;
+line-height:20px;
+}
+
+
+
+
+
+
+/* ===========================================
+  Very Large Deskttop Device
+==============================================*/
+@media(min-width:980px){
+.general-main.verification-main .left-grid .form-container .double,
+.general-main.verification-main .left-grid .form-container .tripple
+{
+display:flex;
+flex-flow:row wrap;
+gap:4%;
+align-items:center;
+}
+.general-main.verification-main .left-grid .form-container .double>*{
+flex:1 1 48%;
+}
+.general-main.verification-main .left-grid .form-container .tripple>*{
+flex:auto;
+}
+/* =====================INSTITUTIONAL VERIFICATION============================ */
+.general-main.verification-main .left-grid .verification-section.institutional .flex-item{
+display:flex;
+flex-flow:row wrap;
+align-items:center;
+justify-content:flex-start;
+margin-bottom:2em;
+gap:4%;
+color:var(--black-color)
+}
+
+}

@@ -1,0 +1,80 @@
+/******************
+footer styles for every page
+  *******************/
+.index-footer{
+border:0px solid red;
+}
+
+.site-footer{
+    background-color:#fff;
+    }
+    .site-footer nav{
+    border:0px solid red;
+    margin-top:2rem;
+    padding:1rem;
+    }
+    .site-footer nav ul{
+    /* font-weight:bold; */
+    line-height:1.5;
+    }
+    .site-footer nav ul a{
+    color:var(--black-color);
+    font-weight:500;
+    }
+    .site-footer nav ul ul a{
+    font-size:var(--sm-font);
+    color:#A7A7A7;
+    font-weight:300;
+    }
+    .site-footer nav > ul > li {
+    margin-bottom:2rem;
+    }
+    .site-footer nav ul.social-icons div{
+        border:0px solid green;
+        display:flex;
+        flex-flow:row wrap;
+        gap:4%;
+       }
+     .site-footer nav ul.social-icons div>*{
+     flex-basis:8%;
+     }
+
+
+
+    /******************
+    tablet device
+  *******************/
+    @media(min-width:380px){
+        .site-footer nav{
+         padding:2rem;
+        }
+        .site-footer nav ul{
+            columns:2;
+         }
+        .site-footer nav ul ul{
+            columns:1;
+         }
+    }
+
+   /******************
+    desktop device
+  *******************/
+    @media(min-width:810px){
+    .site-footer nav{
+    /* border:2px solid green; */
+    margin:0;
+    padding:1rem;
+    }
+    .site-footer nav ul{
+        display:flex;
+        flex-flow:row wrap;
+        /*justify-content:space-between;*/
+        gap:4%;
+        }
+    .site-footer nav ul >*{
+     flex-basis:22%;
+    }
+     .site-footer nav ul ul{
+       display:block;
+      }
+    }
