@@ -1,1 +1,2 @@
-web: gunicorn Huloex.wsgi --log-file -
+web: gunicorn Huloex.wsgi:application --log-file -
+
