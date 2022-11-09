@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn Huloex.wsgi
+web: gunicorn Huloex.wsgi
