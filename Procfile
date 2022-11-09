@@ -1,1 +1,1 @@
-web: gunicorn Huloex.wsgi --log-file -
+web: python manage.py migrate && gunicorn Huloex.wsgi
