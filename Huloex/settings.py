@@ -25,7 +25,7 @@ SECRET_KEY = '9d#4hxbv#2^e6e8t38k64wh@qsgm3@+1g25zq==q=v(ytvzlhk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -112,6 +112,7 @@ DATABASES = {
     }
 }
 
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -144,10 +145,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_TRUSTED_ORIGINS = ['https://web-gunicorn-huloexwsgi-production.up.railway.app']
+
 LOGIN_REDIRECT_URL = '/user/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 #ACCOUNT_SIGNUP_REDIRECT_URL = "/"
 
