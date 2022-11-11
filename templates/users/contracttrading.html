@@ -1,0 +1,265 @@
+{% extends 'basefiles/users_base.html' %}{% load static %}
+
+{% block active_nav %}
+<section class="sidebar">
+    <div class="middle">
+       <ul class="sidebar-middle">
+        <li class="sidebar-row">
+            <a href="/user/">
+             <div class="img-container">
+             <img src="{% static 'images/dashboard-icon3.svg' %}" alt="dashboard icon"> 
+             </div> 
+             <h3>dashboard</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/trade-icon.svg' %}" alt="trade icon"> 
+             </div> 
+             <h3>trade</h3> 
+            </a>
+            <ul class="dropdown-ul">
+            <li class="sidebar-row">
+            <a href="/user/spotTrading">
+             <h3>spot trading</h3> 
+            </a>
+           </li>
+           <li class="sidebar-row">
+            <a class="active-dashboard" href="/user/contractTrading">
+             <h3>contract trading</h3> 
+            </a>
+          </li>
+      </ul>
+     </li>
+     <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/exchange-icon.svg' %}" alt="exchange icon"> 
+             </div> 
+             <h3>exchange</h3> 
+            </a>
+        </li>
+       <li class="sidebar-row">
+            <a href="/user/mywallet">
+             <div class="img-container">
+             <img src="{% static 'images/wallet-icon.svg' %}" alt="wallet icon"> 
+             </div> 
+             <h3>my wallet</h3> 
+            </a>
+        </li>
+
+    </ul> 
+    </div>
+
+    <div class="bottom">
+      <ul class="sidebar-bottom">
+        <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/get-help-icon.svg' %}" alt="get help icon"> 
+             </div> 
+             <h3>get help</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/setting-icon2.svg' %}" alt="setting icon"> 
+             </div> 
+             <h3>settings</h3> 
+            </a>
+            <ul class="dropdown-ul">
+             <li class="sidebar-row">
+            <a href="/user/general">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>general</h3> 
+            </a>
+         </li>
+         <li class="sidebar-row">
+            <a href="/user/security">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div> --> 
+             <h3>security</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row">
+            <a href="/user/verification">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>verification</h3> 
+            </a>
+        </li>
+
+       </ul>
+     </li>
+   </ul>
+ </div>
+</section>         
+{% endblock active_nav %}
+
+{% block content %}
+
+    <main class="main contracttrading-main">
+    <section class="close">
+
+      </section>
+        <!-- The Contract Trading Page is Divide into Three Sections -->
+        <!-- Some styles were imported from spottrading styles -->
+
+        <section class="main-top">
+            <div class="inner-grid-1 contracttrade-grid">
+                <div class="align-left">
+                <div class="header-container">
+                    <a href="#" id="0">BTC/USDT Option Contract</a>
+                    <a href="#" id="1">ETH/USDT Option Contract</a>
+                </div>
+                 <div class="realtime-quote-text">
+                    <h3>Histrory Real-Time Quotes</h3>
+                 </div>
+                 <div class="candle-chart">
+                    <h4>Chart</h4>
+                    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_526b6"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "autosize": true,
+    "symbol": "NASDAQ:AAPL",
+    "height":"100%",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "light",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "allow_symbol_change": true,
+    "container_id": "tradingview_526b6"
+  }
+    );
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+                 </div>
+                </div>
+                
+                <div class="align-right">
+                   <div class="balance-card">
+                    <div class="balance-card-header">
+                        <h3>No. <span class="trade-no">273327</span></h3>
+                        <h4>Time Range: <span class="time-range">20022/5/20 6:29:34 ~ 2022/5/20 6:30:4</span></h4>
+                    </div>
+                    <div class="balance-card-body">
+                        <div class="box-container">
+                            <div class="box">
+                                <p>Buy Reward Pool</p>
+                                <span>(USDT)</span>
+                            </div>
+                            <div class="box">
+                                <p>Sell Reward Pool</p>
+                                <span>(USDT)</span>
+                            </div>
+                            <div class="box">
+                                <p>My best Amount</p>
+                                <span>(USDT)</span>
+                            </div>
+                        </div>
+
+                        <div class="duration-in-seconds">
+                            <p>Duration(sec)</p>
+                        </div>
+
+                        <div class="duration-box">
+                            <span>30</span>
+                            <span>60</span>
+                            <span>90</span>
+                            <span>120</span>
+                        </div>
+
+                        <div class="amount-in-usdt">
+                            <p>Amount(USDT)</p>
+                        </div>
+
+                        <div class="amount-box">
+                            <span>100</span>
+                            <span>200</span>
+                            <span>500</span>
+                            <span>1000</span>
+                        </div>
+
+                        <div class="increment-decrement-box">
+                           <input class="increase_decrease" type="number" id="number"/>
+                        </div>
+
+                        <div class="price-buttons">
+                          <button>Price Up</button>
+                          <button>Price Down</button>
+                        </div>
+                    </div>
+
+                    <div class="balance-footer">
+                        <small>Balance: 5667 USDT</small>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-middle">
+            <div class="trade-no-header">
+                <h4>Trade No. <span class="trade-no">273326</span></h4>
+            </div>
+            <div class="progress-wrapper">
+                <p class="progress-bar"></p>
+            </div>
+            <div class="flex-container">
+                <ul>
+                    <li>Buy Reward Pool:<span>27438</span></li>
+                    <li>USDT Sell Reward Pool:<span>23361</span></li>
+                    <li>USDT My Bet Amount:<span>0 USDT</span></li>
+                    <li>Open Price: <span>2020.52</span></li>
+                    <li>USDT Current Price: <span>2018.41</span></li>
+                    <li>USDT <span class="green">+0.104%</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-bottom">
+           <div class="recent-trades-analysis">
+            <ul>
+                <li><a href="#">No. Bet</a></li>
+                <li><a href="#">Amount</a></li>
+                <li><a href="#">Direction</a></li>
+                <li><a href="#">Result</a></li>
+                <li><a href="#">Reward</a></li>
+                <li><a href="#">Amount</a></li>
+                <li><a href="#">Open Fee</a></li>
+                <li><a href="#">Reward Fee</a></li>
+                <li><a href="#">Create Time</a></li>
+            </ul>
+           </div> 
+           <p class="trade-report">No Trades Yet</p>
+        </section>
+    </main>
+    <!-- ==============END OF MAIN============== -->
+
+ </div>
+ <!-- =============END OF GRID CONTAINER -->
+  
+     
+
+</div>
+
+    
+
+
+
+{% endblock content %}

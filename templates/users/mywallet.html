@@ -1,0 +1,468 @@
+{% extends 'basefiles/users_base.html' %}{% load static %}
+{% block active_nav %}
+<section class="sidebar">
+    <div class="middle">
+       <ul class="sidebar-middle">
+        <li class="sidebar-row">
+            <a href="/user/">
+             <div class="img-container">
+             <img src="{% static 'images/dashboard-icon3.svg' %}" alt="dashboard icon"> 
+             </div> 
+             <h3>dashboard</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/trade-icon.svg' %}" alt="trade icon"> 
+             </div> 
+             <h3>trade</h3> 
+            </a>
+            <ul class="dropdown-ul">
+            <li class="sidebar-row">
+            <a href="/user/spotTrading">
+             <h3>spot trading</h3> 
+            </a>
+           </li>
+           <li class="sidebar-row">
+            <a  href="/user/contractTrading">
+             <h3>contract trading</h3> 
+            </a>
+          </li>
+      </ul>
+     </li>
+     <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/exchange-icon.svg' %}" alt="exchange icon"> 
+             </div> 
+             <h3>exchange</h3> 
+            </a>
+        </li>
+       <li class="sidebar-row">
+            <a href="/user/mywallet" class="active-dashboard">
+             <div class="img-container">
+             <img src="{% static 'images/wallet-icon.svg' %}" alt="wallet icon"> 
+             </div> 
+             <h3>my wallet</h3> 
+            </a>
+        </li>
+
+    </ul> 
+    </div>
+
+    <div class="bottom">
+      <ul class="sidebar-bottom">
+        <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/get-help-icon.svg' %}" alt="get help icon"> 
+             </div> 
+             <h3>get help</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/setting-icon2.svg' %}" alt="setting icon"> 
+             </div> 
+             <h3>settings</h3> 
+            </a>
+            <ul class="dropdown-ul">
+             <li class="sidebar-row">
+            <a href="/user/general">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>general</h3> 
+            </a>
+         </li>
+         <li class="sidebar-row">
+            <a href="/user/security">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div> --> 
+             <h3>security</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row">
+            <a href="/user/verification">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>verification</h3> 
+            </a>
+        </li>
+
+       </ul>
+     </li>
+   </ul>
+ </div>
+</section>         
+{% endblock active_nav %}
+{% block content %}
+    <main class="main mywallet-main">
+    <section class="close">
+
+      </section>
+    
+    <section class="coin-exchange-section">
+      <div class="flex-row flex-container">
+        <figure>
+            <div class="item-header">
+                <div class="img-container">
+                <img src="{% static 'images/bitcoin-icon.svg' %}" alt="ethereum icon">
+                </div>
+                <span>Bitcoin</span>
+            </div>
+            <figcaption>
+                <p class="exchange-rate">0.3656 <span>BTC</span></p>
+                <small class="dollar-conversion">&dollar;21,658</small>
+            </figcaption>
+        </figure>
+        <figure>
+            <div class="item-header">
+                <div class="img-container">
+                <img src="{% static 'images/etherum-icon.svg' %}" alt="ethereum icon">
+                </div>
+                <span>Ethereum</span>
+            </div>
+            <figcaption>
+                <p class="exchange-rate">1,658 <span>ETH</span></p>
+                <small class="dollar-conversion">&dollar;21,658</small>
+            </figcaption>
+        </figure>
+        <figure>
+            <div class="item-header">
+                <div class="img-container">
+                <img src="{% static 'images/binance-icon.svg' %}" alt="binance icon">
+                </div>
+                <span>BNB</span>
+            </div>
+            <figcaption>
+                <p class="exchange-rate">658 <span>BNB</span></p>
+                <small class="dollar-conversion">&dollar;21,658</small>
+            </figcaption>
+        </figure>
+        <figure>
+            <div class="item-header">
+                <div class="img-container">
+                <img src="{% static 'images/tetha-btc-icon.svg' %}" alt="tetha icon">
+                </div>
+                <span>Tether</span>
+            </div>
+            <figcaption>
+                <p class="exchange-rate">11,658 <span>USDT</span></p>
+                <small class="dollar-conversion">&dollar;11,658</small>
+            </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wallet-trade-section">
+        <figure>
+            <div class="img-container">
+                <img src="{% static 'images/piechart-icon.svg' %}" alt="piechart icon"/>
+            </div>
+            <figcaption>
+                <div class="wallet-description">
+                    <h4>Total Balance</h4>
+                    <p>1,658</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <div class="img-container">
+                <img src="{% static 'images/wallet-book.svg' %}" alt="wallet icon"/>
+            </div>
+            <figcaption>
+                <div class="wallet-description">
+                    <h4>Spot Trading Wallet</h4>
+                    <p>1,658</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <div class="img-container">
+                <img src="{% static 'images/office-briefcase.svg' %}" alt="trading icon"/>
+            </div>
+            <figcaption>
+                <div class="wallet-description">
+                    <h4>Contract Tading Wallet</h4>
+                    <p>1,000</p>
+                </div>
+            </figcaption>
+        </figure>
+        
+    </section>
+
+    
+    <!--The inner grid-1 class was styled in spotraddding.css file  -->
+    <section class="inner-grid-1 display-grid-section" id="display-grid-section">
+        <div class="align-left trade-chart">
+            <table class="tabular-data">
+                <thead>
+                  <tr class="trade-data-row">
+                    <th class="table-head">Asset</th>
+                    <th class="table-head">Available</th>
+                    <th class="table-head">Locked</th>
+                    <th class="table-head">Total</th>
+                    <th class="table-head">USD Value</th>
+                    <th class="table-head"></th>
+                    <th class="table-head"></th>
+                    <th class="table-head"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- first row -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/BTC.png' %}">
+                        </div>
+                        <!-- <div class="image-continer second-symbol">
+                          <img src="{% static '' %} images/USDT.png">
+                        </div> -->
+                        <span class="currency-symbol">BTC</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+          
+                  <!-- second row -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/ETH.png' %} ">
+                        </div>
+                        <span class="currency-symbol">ETH</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+          
+                  <!-- third row -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/XRP.png' %}">
+                        </div>
+                        <span class="currency-symbol">XRP</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+                  
+          
+                  <!--fourth row -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/BTC.png' %} ">
+                        </div>
+                        <span class="currency-symbol">BCH</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+                  
+          
+                  <!-- fifth row -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/USDT.png' %}">
+                        </div>
+                        <span class="currency-symbol">USDT</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+                  
+          
+                  <!-- sixth row -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/ETH.png' %}">
+                        </div>
+                        <span class="currency-symbol">ETH</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+                  
+          
+                  <!-- sixth row -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/USDC.png' %}">
+                        </div>
+                        <span class="currency-symbol">USDC</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+                  
+                  <!-- seventh row-- -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/SHIB.png' %}">
+                        </div>
+                        <span class="currency-symbol">SHIB</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+
+                  <!-- Eight row------ -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/USDC.png' %}">
+                        </div>
+                        <span class="currency-symbol">USDC</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+
+                  <!-- nth-row-------- -->
+                  <tr class="trade-data-row">
+                    <td class="table-data">
+                      <div class="cryptocurrency-pairs currency-symbol">
+                        <div class="image-container first-symbol">
+                          <img src="{% static 'images/XRP.png' %}">
+                        </div>
+                        <span class="currency-symbol">XRP</span>
+                      </div>
+                    </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0 </td>
+                    <td class="table-data"> 0.00 </td>
+                    <td class="table-data link"> Deposit </td>
+                    <td class="table-data link"> Withdraw </td>
+                    <td class="table-data link"> Transfer </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+        <div class="align-right">
+        <section class="spot-to-contract transfer section-5">
+        <div class="flex">
+         <div class="btc-eth">
+            <h4>Transfer From</h4>
+            <div class="btn-row">
+                <input type="number" name="number">
+                <label>Spot<span class="fa fa-angle-down"></span></label>
+            </div>
+            <div class="btc-division-line">
+                <span class="right"></span>
+                <span class="left"></span>
+            </div>
+            
+            <div class="btn-row">
+                <input type="number" name="number">
+                <label>Contract<span class="fa fa-angle-down"></span></label>
+            </div>
+            <button class="convert-cta">convert</button>
+         </div>
+         <div class="barcode-container">
+            <div class="barcode-cta-btn">
+                <button>Deposit</button>
+                <button>Withdraw</button>
+            </div>
+          <div class="img-container">
+           <img src="{% static 'images/barcode-scan.svg' %}" alt="barcode">
+          </div>
+         </div>
+        </div>
+
+    </section>
+        </div>
+    </section>
+     
+
+      
+    </main>
+    <!-- ==============END OF MAIN============== -->
+
+ </div>
+ <!-- =============END OF GRID CONTAINER -->
+  
+     
+
+</div>
+
+    
+
+
+
+{% endblock content %}

@@ -1,0 +1,262 @@
+{% extends 'basefiles/users_base.html' %}{% load static %}
+{% block active_nav %}
+<section class="sidebar">
+    <div class="middle">
+       <ul class="sidebar-middle">
+        <li class="sidebar-row">
+            <a href="/user/">
+             <div class="img-container">
+             <img src="{% static 'images/dashboard-icon3.svg' %}" alt="dashboard icon"> 
+             </div> 
+             <h3>dashboard</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/trade-icon.svg' %}" alt="trade icon"> 
+             </div> 
+             <h3>trade</h3> 
+            </a>
+            <ul class="dropdown-ul">
+            <li class="sidebar-row">
+            <a href="/user/spotTrading">
+             <h3>spot trading</h3> 
+            </a>
+           </li>
+           <li class="sidebar-row">
+            <a  href="/user/contractTrading">
+             <h3>contract trading</h3> 
+            </a>
+          </li>
+      </ul>
+     </li>
+     <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/exchange-icon.svg' %}" alt="exchange icon"> 
+             </div> 
+             <h3>exchange</h3> 
+            </a>
+        </li>
+       <li class="sidebar-row">
+            <a href="/user/mywallet">
+             <div class="img-container">
+             <img src="{% static 'images/wallet-icon.svg' %}" alt="wallet icon"> 
+             </div> 
+             <h3>my wallet</h3> 
+            </a>
+        </li>
+
+    </ul> 
+    </div>
+
+    <div class="bottom">
+      <ul class="sidebar-bottom">
+        <li class="sidebar-row">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/get-help-icon.svg' %}" alt="get help icon"> 
+             </div> 
+             <h3>get help</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row dropdown-li">
+            <a href="#">
+             <div class="img-container">
+             <img src="{% static 'images/setting-icon2.svg' %}" alt="setting icon"> 
+             </div> 
+             <h3>settings</h3> 
+            </a>
+            <ul class="dropdown-ul">
+             <li class="sidebar-row">
+            <a href="/user/general">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>general</h3> 
+            </a>
+         </li>
+         <li class="sidebar-row">
+            <a class="active-dashboard" href="/user/security">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div> --> 
+             <h3>security</h3> 
+            </a>
+        </li>
+        <li class="sidebar-row">
+            <a href="/user/verification">
+             <!-- <div class="img-container">
+             <img src="{% static '' %}images"> 
+             </div>  -->
+             <h3>verification</h3> 
+            </a>
+        </li>
+
+       </ul>
+     </li>
+   </ul>
+ </div>
+</section>         
+{% endblock active_nav %}
+{% block content %}
+    <main class="main general-main security-main">
+    <section class="close">
+
+      </section>
+    <!-- This Page shares a common a style with other pages
+      SO  the use of "settings-grid" as prefix -->
+      
+        <section class="settings-grid security-grid">
+            <div class="right-grid">
+                <h2>Security</h2>
+                <a href="" class="profile-wrapper">
+                    <div class="img-container">
+                        <img src="{% static 'images/login-box-icon.svg' %}" alt="login icon">
+                    </div>
+                     <div>
+                        <h4>Login History</h4>
+                        <p>Changed {{ profile.user.last_login }}</p>
+                     </div>
+                    </a>
+                <a id="google-auth" href="#" class="profile-wrapper">
+                    <div class="img-container">
+                        <img src="{% static 'images/google-icon.svg' %}" alt="google icon">
+                    </div>
+                     <div>
+                        <h4 id="google-auth">Google</h4>
+                        <p>Authentication</p>
+                     </div>
+                 </a>
+                <a id="password-section" href="{% url 'account_change_password' %}" class="profile-wrapper active">
+                    <div class="img-container">
+                        <img src="{% static 'images/locked-password-icon.svg' %}" alt="locked password icon">
+                    </div>
+                     <div>
+                        <h4 id="password-section">Password</h4>
+                        <p>Changed 5 Months Ago</p>
+                     </div>
+                </a>
+                <a href="{% url 'account_email' %}" class="profile-wrapper">
+                    <div class="img-container">
+                        <img src="{% static 'images/verified-user-icon.svg' %}" alt="verified user icon">
+                    </div>
+                     <div>
+                        <h4>Email</h4>
+                        <p>{{ profile.user.email }}</p>
+                     </div>
+                </a>
+                <a id="confirmation-code" href="#" class="profile-wrapper">
+                    <div class="img-container">
+                        <img src="{% static 'images/comfirmation-icon.svg' %}" alt="confirmation icon">
+                    </div>
+                     <div>
+                        <p id="confirmation-code">Confirmation Code</p>
+                     </div>
+                </a>
+    
+            </div>
+    
+            <div class="left-grid">
+
+                <!-- =======PASSWORD SECTION========= -->
+                {% comment %} <section id="password-section" class="security-section active-security">
+                <h3>Password</h3>
+                <p class="change-password">Change Log in Password</p>
+                    <div class="form-container">
+                        <form>
+                            <div class="form-field">
+                                <input class="password" type="password" placeholder="Old Password" required/>
+                                <img class="eye-check-icon" src="{% static 'images/eye-password-check.svg' %}" alt="show password">
+                            </div>
+                            <div class="form-field">
+                                <input class="password" type="password" placeholder="New Password" required />
+                                <img class="eye-check-icon" src="{% static 'images/eye-password-check.svg' %}" alt="show password">
+                            </div>
+                            <div class="form-field">
+                                <input class="password" type="password" placeholder="Re-Enter New Password" required />
+                                <img class="eye-check-icon" src="{% static 'images/eye-password-check.svg' %}" alt="show password">
+                            </div>
+                            <button type="submit">Change Password</button>
+                        </form>
+                    </div>
+                </section> {% endcomment %}
+
+                <!-- ==========COMFIRMATION CODE SECTION=========== -->
+                <section id="confirmation-code" class="security-section">
+                <h3>Confirmation Code</h3>
+                <p class="change-password">Set confirmation code for transactions</p>
+                    <div class="form-container">
+                        <form>
+                            <div class="form-field">
+                                <input class="password" type="password" placeholder="Enter Old confirmation code" required />
+                                <img class="eye-check-icon" src="{% static 'images/eye-password-check.svg' %}" alt="show password">
+                            </div>
+                            <div class="form-field">
+                                <input class="password" type="password" placeholder="Enter New confirmation code" required />
+                                <img class="eye-check-icon" src="{% static 'images/eye-password-check.svg' %}" alt="show password">
+                            </div>
+                            <button type="submit">Confirm</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- ================GOOGLE AUTHENTICATION SECTION================ -->
+                <section id="google-auth" class="security-section">
+                <h3>Google Authentication</h3>
+                <p>Google Authentication is a dynamic password tool that works like SMS dynamic verification</p>
+                <p>A dynamic verification code is generated every 30s after binding and the verification code can be used for security verification of operations such as login,coin withdrawal and modifications of security settings.</p>
+                <ol>
+                    <li>IOS users log in to the App Store to search for 'Authenticator'.</li>
+                    <li>Android users log in to the app store or use the mobile browser to search for 'Google Authenticator'.</li>
+                    <li>Open Google Authentication, scan the QR code below or manually enter the following key to add a verification token.</li>
+                    <li>The key is used to retrieve the Google Authenticator when the phone is replaced or lost. Be sure to save the following key backup before binding</li>
+                </ol>
+
+                <div class="scan-barcode">
+                <h4 style="text-align:center;">Secret Key</h4>
+                <div class="barcode">
+                    <img src="{% static 'images/barcode-scan.svg' %}" alt="bar code">
+                </div>
+                <div class="barcode-link">
+                    <p>DFSDGHJKJHKJGH </p>
+                    <div>
+                    <img src="{% static 'images/copy-icon.svg' %}" alt="copy icon">
+                   </div>
+                </div>
+                </div>
+
+                    <div class="form-container">
+                        <p>Enter the new 6-digit verification code in Google Authenticator</p>
+                        <form>
+                            <div class="form-field">
+                                <input class="password" type="password" required />
+                                <img class="eye-check-icon" src="{% static 'images/eye-password-check.svg' %}" alt="show password">
+                            </div>
+                            <button type="submit">Confirm</button>
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+          </section>
+        
+
+     
+
+      
+    </main>
+    <!-- ==============END OF MAIN============== -->
+
+ </div>
+ <!-- =============END OF GRID CONTAINER -->
+  
+     
+
+</div>
+
+    
+
+
+{% endblock content %}
