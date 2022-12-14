@@ -1,1 +1,1 @@
-web: gunicorn Huloex.wsgi --log-file -
+web: gunicorn -b 0.0.0.0:8080 Huloex.wsgi:application --log-file -
